@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Cobra.unity
+- path: Assets/Scenes/Cobra_Demo_2.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

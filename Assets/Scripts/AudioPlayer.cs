@@ -29,6 +29,9 @@ public class AudioPlayer : MonoBehaviour
     [Tooltip("Time (in seconds) to delay the start of the audio playback.")]
     public float delayDuration = 0f;
 
+    [Tooltip("Plays sound on enable")]
+    public bool playOnEnable = false;
+
     /// <summary>
     /// Public method to play the audio clip. Instantiates an AudioSource component,
     /// optionally delays the start of playback, optionally fades in from 0 to the specified 
@@ -44,6 +47,10 @@ public class AudioPlayer : MonoBehaviour
 
         // Start a coroutine to handle delay, playback, fade in, and cleanup
         StartCoroutine(PlayAudioCoroutine());
+    }
+
+    public void OnEnable(){
+        if(playOnEnable) Play();
     }
 
     /// <summary>

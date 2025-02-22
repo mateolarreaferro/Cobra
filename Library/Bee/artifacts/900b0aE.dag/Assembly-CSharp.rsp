@@ -421,8 +421,8 @@
 "Assets/Scripts/GrowAndShrink.cs"
 "Assets/Scripts/notificationManager.cs"
 "Assets/Scripts/RectTransformerScaler.cs"
+"Assets/Scripts/Selected.cs"
 "Assets/Scripts/Wheel.cs"
-"Assets/Selected.cs"
 -langversion:9.0
 /deterministic
 /optimize+

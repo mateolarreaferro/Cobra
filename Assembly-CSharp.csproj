@@ -71,13 +71,13 @@
     <Compile Include="Assets/Mobile App UI Templates Pro Assets/Scripts/QuantityCounter.cs" />
     <Compile Include="Assets/Scripts/backgroundCircleAnim.cs" />
     <Compile Include="Assets/Scripts/AudioPlayer.cs" />
+    <Compile Include="Assets/Scripts/Selected.cs" />
     <Compile Include="Assets/Mobile App UI Templates Pro Assets/Scripts/SliderToggle.cs" />
     <Compile Include="Assets/Scripts/RectTransformerScaler.cs" />
     <Compile Include="Assets/Scripts/Wheel.cs" />
     <Compile Include="Assets/Scripts/GrowAndShrink.cs" />
     <Compile Include="Assets/Scripts/notificationManager.cs" />
     <Compile Include="Assets/Scripts/backgroundInterpolation.cs" />
-    <Compile Include="Assets/Selected.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
