@@ -2229,7 +2229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 321, y: 172}
+  m_AnchoredPosition: {x: 302, y: 178}
   m_SizeDelta: {x: 494.40857, y: 120.99992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605212135
@@ -2279,8 +2279,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3685,11 +3685,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 453530790752985360, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 62
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 453530790752985360, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1144
+      value: -1162
       objectReference: {fileID: 0}
     - target: {fileID: 502430685221735654, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_Color.b
@@ -3770,6 +3770,22 @@ PrefabInstance:
     - target: {fileID: 2292671045211695275, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3104107214245476689, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3104107214245476689, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3104107214245476689, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3104107214245476689, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 4591742177661394233, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_Name
@@ -3901,11 +3917,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6881547523372500768, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -181
+      value: -101
       objectReference: {fileID: 0}
     - target: {fileID: 6881547523372500768, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 172
+      value: 178
       objectReference: {fileID: 0}
     - target: {fileID: 6952444915450291851, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3996,8 +4012,20 @@ PrefabInstance:
       value: 4278190080
       objectReference: {fileID: 0}
     - target: {fileID: 8188885630700142138, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
+      propertyPath: m_StartAxis
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188885630700142138, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_CellSize.x
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188885630700142138, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
+      propertyPath: m_CellSize.y
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188885630700142138, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8188885630700142138, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_ConstraintCount
@@ -4036,8 +4064,16 @@ PrefabInstance:
       value: streak
       objectReference: {fileID: 0}
     - target: {fileID: 9206022991038425789, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206022991038425789, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_margin.z
       value: 238.35428
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206022991038425789, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6201315771257753120, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
