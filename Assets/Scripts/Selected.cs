@@ -9,34 +9,47 @@ public class Selected : MonoBehaviour
     [SerializeField] private GameObject walkingCard;
     [SerializeField] private GameObject dietCard;
 
+    private void Start(){
+        SetCards(ActivityType.random);
+    }
+
     /// <summary>
     /// Activates the card corresponding to the given activity type and disables the others.
     /// </summary>
     public void SetCards(ActivityType activityType)
     {
+        // First, disable all cards.
+        walkingCard.SetActive(false);
+        bodyCard.SetActive(false);
+        dietCard.SetActive(false);
+
         switch (activityType)
         {
             case ActivityType.walking:
                 walkingCard.SetActive(true);
-                bodyCard.SetActive(false);
-                dietCard.SetActive(false);
                 break;
             case ActivityType.bodyWeights:
-                walkingCard.SetActive(false);
                 bodyCard.SetActive(true);
-                dietCard.SetActive(false);
                 break;
             case ActivityType.diet:
-                walkingCard.SetActive(false);
-                bodyCard.SetActive(false);
                 dietCard.SetActive(true);
                 break;
             case ActivityType.random:
             default:
-                // For random, you might decide to hide all cards or pick one at random.
-                walkingCard.SetActive(false);
-                bodyCard.SetActive(false);
-                dietCard.SetActive(false);
+                // For random, pick one at random from the three options.
+                int randomChoice = Random.Range(0, 3); // returns 0, 1, or 2
+                switch (randomChoice)
+                {
+                    case 0:
+                        walkingCard.SetActive(true);
+                        break;
+                    case 1:
+                        bodyCard.SetActive(true);
+                        break;
+                    case 2:
+                        dietCard.SetActive(true);
+                        break;
+                }
                 break;
         }
     }
