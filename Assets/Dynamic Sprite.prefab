@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5891902140220629582}
   - component: {fileID: 7785394671796488877}
+  - component: {fileID: 4578426127331245758}
   m_Layer: 0
   m_Name: Walking
   m_TagString: Untagged
@@ -84,6 +85,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4578426127331245758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3137917517285396865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5686ee835424660a06b24e8b744424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grownScale: {x: 0.055, y: 0.055, z: 0.055}
+  shrunkScale: {x: 0.0001, y: 0.0001, z: 0.0001}
+  duration: 0.5
+  easeType: 1
+  growOnEnable: 1
 --- !u!1 &6853937748526486752
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,13 +112,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8558292846147675108}
   - component: {fileID: 6770914809323780271}
+  - component: {fileID: 1805346858153334265}
   m_Layer: 0
   m_Name: Diet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8558292846147675108
 Transform:
   m_ObjectHideFlags: 0
@@ -168,6 +187,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1805346858153334265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6853937748526486752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5686ee835424660a06b24e8b744424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grownScale: {x: 0.055, y: 0.055, z: 0.055}
+  shrunkScale: {x: 0.0001, y: 0.0001, z: 0.0001}
+  duration: 0.5
+  easeType: 1
+  growOnEnable: 1
 --- !u!1 &7403632326150007807
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +249,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7403632326150007807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -271,6 +307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedObject: {fileID: 8821558852157150409}
+  bodyCard: {fileID: 8859519919764918468}
+  walkingCard: {fileID: 3137917517285396865}
+  dietCard: {fileID: 6853937748526486752}
 --- !u!114 &607311079625877322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,13 +458,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4801392898425361537}
   - component: {fileID: 1844916625208575458}
+  - component: {fileID: 614430226366195231}
   m_Layer: 0
   m_Name: Body Weights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4801392898425361537
 Transform:
   m_ObjectHideFlags: 0
@@ -481,8 +521,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 011632799a7ea406db68250d1f121a61, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 02632c180a11b4b94a13297e54af8080, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -493,3 +533,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &614430226366195231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8859519919764918468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5686ee835424660a06b24e8b744424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grownScale: {x: 0.055, y: 0.055, z: 0.055}
+  shrunkScale: {x: 0.0001, y: 0.0001, z: 0.0001}
+  duration: 0.5
+  easeType: 1
+  growOnEnable: 1

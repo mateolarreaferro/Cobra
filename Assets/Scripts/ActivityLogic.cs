@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
 using System.Linq;
+using System;
 
 public enum ActivityType { walking, bodyWeights, diet, random }
 
@@ -21,6 +22,9 @@ public class ActivityLogic : MonoBehaviour
     [Header("Events")]
     public UnityEvent OnInstructionCardTurnedOff;
     
+    // Static event for category changes.
+    public static event Action<ActivityType> OnCategoryChanged;
+    
     private ActivityType currentActivityType = ActivityType.random;
     private Coroutine disableCardCoroutine;
 
@@ -37,24 +41,28 @@ public class ActivityLogic : MonoBehaviour
     {
         CancelInstruction(); // Hide any active instruction immediately.
         currentActivityType = ActivityType.walking;
+        OnCategoryChanged?.Invoke(currentActivityType);
     }
     
     public void SetWeights()
     {
         CancelInstruction();
         currentActivityType = ActivityType.bodyWeights;
+        OnCategoryChanged?.Invoke(currentActivityType);
     }
     
     public void SetDiet()
     {
         CancelInstruction();
         currentActivityType = ActivityType.diet;
+        OnCategoryChanged?.Invoke(currentActivityType);
     }
     
     public void SetRandom()
     {
         CancelInstruction();
         currentActivityType = ActivityType.random;
+        OnCategoryChanged?.Invoke(currentActivityType);
     }
     
     public void DisplayInstruction(int sliceIndex)
