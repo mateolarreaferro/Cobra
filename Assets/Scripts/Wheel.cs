@@ -19,7 +19,7 @@ public class Wheel : MonoBehaviour
     [SerializeField] private UnityEvent onFinishRotation;
 
     [Header("Activity Logic Reference")]
-    [SerializeField] private ActivityLogic activityLogic;  // Reference to ActivityLogic
+    [SerializeField] private ActivityLogic activityLogic;
 
     private List<GameObject> spawnedObjects = new List<GameObject>();
     private bool isSpinning = false;
