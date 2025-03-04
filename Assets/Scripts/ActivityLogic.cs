@@ -15,30 +15,59 @@ public class ActivityLogic : MonoBehaviour
     [SerializeField] private GameObject[] bodyWeightCards;
     [SerializeField] private GameObject[] dietCards;
     
-    // Combined array for random selection
+    // Combined array for random selection.
     private GameObject[] allActivityCards;
     
     [Header("Events")]
     public UnityEvent OnInstructionCardTurnedOff;
     
     private ActivityType currentActivityType = ActivityType.random;
-    
+    private Coroutine disableCardCoroutine;
+
     private void Awake()
     {
-        // Combine all activity arrays into one for random selection
+        // Combine all activity arrays into one for random selection.
         allActivityCards = walkingCards
             .Concat(bodyWeightCards)
             .Concat(dietCards)
             .ToArray();
     }
     
-    public void SetWalking()  => currentActivityType = ActivityType.walking;
-    public void SetWeights()  => currentActivityType = ActivityType.bodyWeights;
-    public void SetDiet()     => currentActivityType = ActivityType.diet;
-    public void SetRandom()   => currentActivityType = ActivityType.random;
+    public void SetWalking()
+    {
+        CancelInstruction(); // Hide any active instruction immediately.
+        currentActivityType = ActivityType.walking;
+    }
+    
+    public void SetWeights()
+    {
+        CancelInstruction();
+        currentActivityType = ActivityType.bodyWeights;
+    }
+    
+    public void SetDiet()
+    {
+        CancelInstruction();
+        currentActivityType = ActivityType.diet;
+    }
+    
+    public void SetRandom()
+    {
+        CancelInstruction();
+        currentActivityType = ActivityType.random;
+    }
     
     public void DisplayInstruction(int sliceIndex)
     {
+        // Cancel any previous instruction display.
+        CancelInstruction();
+
+        // Hide all activity cards to clear any prior instruction.
+        foreach (var card in allActivityCards)
+        {
+            card.SetActive(false);
+        }
+        
         GameObject selectedCard = null;
         
         if (currentActivityType == ActivityType.random)
@@ -65,7 +94,7 @@ public class ActivityLogic : MonoBehaviour
 
         if (selectedCard != null)
         {
-            // Ensure the parent instruction card is active
+            // Ensure the parent instruction card is active.
             if (instructionCard != null && !instructionCard.activeSelf)
             {
                 instructionCard.SetActive(true);
@@ -73,11 +102,8 @@ public class ActivityLogic : MonoBehaviour
 
             selectedCard.SetActive(true);
             
-            // Stop any previous coroutine
-            StopAllCoroutines();
-            
-            // Disable the card after a delay
-            StartCoroutine(DisableCardAfterDelay(selectedCard, 5f));
+            // Start the disable sequence and store its reference.
+            disableCardCoroutine = StartCoroutine(DisableCardAfterDelay(selectedCard, 5f));
         }
     }
     
@@ -86,5 +112,28 @@ public class ActivityLogic : MonoBehaviour
         yield return new WaitForSeconds(delay);
         card.SetActive(false);
         OnInstructionCardTurnedOff?.Invoke();
+        disableCardCoroutine = null;
+    }
+    
+    /// <summary>
+    /// Cancels any active instruction display and hides all cards.
+    /// </summary>
+    public void CancelInstruction()
+    {
+        if (disableCardCoroutine != null)
+        {
+            StopCoroutine(disableCardCoroutine);
+            disableCardCoroutine = null;
+        }
+        
+        foreach (var card in allActivityCards)
+        {
+            card.SetActive(false);
+        }
+        
+        if (instructionCard != null)
+        {
+            instructionCard.SetActive(false);
+        }
     }
 }

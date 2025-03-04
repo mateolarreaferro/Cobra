@@ -23,6 +23,10 @@ public class Wheel : MonoBehaviour
 
     private List<GameObject> spawnedObjects = new List<GameObject>();
     private bool isSpinning = false;
+    private Coroutine spinRoutine;
+
+    // Track the currently active Selected component (if any)
+    private Selected activeSelected;
 
     void Start()
     {
@@ -72,9 +76,28 @@ public class Wheel : MonoBehaviour
     /// </summary>
     public void StartWheel()
     {
-        if (!isSpinning)
+        // Cancel any running spin before starting a new one.
+        CancelSpin();
+        spinRoutine = StartCoroutine(SpinWheelRoutine());
+    }
+
+    /// <summary>
+    /// Cancels an ongoing wheel spin and disables any active selected object.
+    /// </summary>
+    public void CancelSpin()
+    {
+        if (spinRoutine != null)
         {
-            StartCoroutine(SpinWheelRoutine());
+            StopCoroutine(spinRoutine);
+            spinRoutine = null;
+            isSpinning = false;
+        }
+
+        // If a selected object is currently active, disable it immediately.
+        if (activeSelected != null)
+        {
+            activeSelected.DisableSelectedCircle();
+            activeSelected = null;
         }
     }
 
@@ -87,7 +110,6 @@ public class Wheel : MonoBehaviour
         float startAngle = spawnCircle.transform.eulerAngles.z;
         
         // --- RANDOMIZE THE SPIN FORCE ---
-        // Use a random number of full spins plus a random extra angle.
         int randomSpins = Random.Range(2, 8);
         float randomExtraAngle = Random.Range(0f, 360f);
         float totalRotation = randomSpins * 360f + randomExtraAngle;
@@ -109,27 +131,25 @@ public class Wheel : MonoBehaviour
             yield return null;
         }
 
-        // Set the wheel to its final rotation without snapping it to a perfect 12 o'clock.
+        // Ensure the wheel is set to its final rotation.
         spawnCircle.transform.eulerAngles = new Vector3(0f, 0f, finalAngle);
 
         // --- DETERMINE THE CHOSEN SLICE (CLOSEST TO 12 O'CLOCK) ---
-        // World 12 o'clock corresponds to 90° in Unity.
         float rotatedAngle = finalAngle % 360f;
         float sliceAngle = 360f / count;
-        // Calculate the angular difference from 90°.
         float diff = 90f - rotatedAngle;
         diff = (diff + 360f) % 360f;
         int chosenIndex = Mathf.RoundToInt(diff / sliceAngle) % count;
 
-        // Use the chosen slice.
         GameObject chosenObject = spawnedObjects[chosenIndex];
         Debug.Log("Wheel landed on slice: " + chosenObject.name);
 
-        // Call the EnableSelectedCircle() method on the 'Selected' component.
+        // Activate the selected circle.
         Selected selectedComponent = chosenObject.GetComponent<Selected>();
         if (selectedComponent != null)
         {
             selectedComponent.EnableSelectedCircle();
+            activeSelected = selectedComponent;
             // Disable the selected circle 4 seconds later.
             StartCoroutine(DisableSelectedCircleAfterDelay(selectedComponent, 4f));
         }
@@ -142,6 +162,7 @@ public class Wheel : MonoBehaviour
 
         onFinishRotation?.Invoke();
         isSpinning = false;
+        spinRoutine = null;
     }
 
     private IEnumerator DisableSelectedCircleAfterDelay(Selected selectedComp, float delay)
@@ -150,6 +171,11 @@ public class Wheel : MonoBehaviour
         if (selectedComp != null)
         {
             selectedComp.DisableSelectedCircle();
+        }
+        // Clear the active selected if it is the one we just disabled.
+        if (activeSelected == selectedComp)
+        {
+            activeSelected = null;
         }
     }
 
