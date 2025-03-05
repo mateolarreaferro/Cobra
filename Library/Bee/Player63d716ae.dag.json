@@ -45952,11 +45952,16 @@
       "DisplayName": "Writing Info.plist",
       "ActionType": "WriteFile",
       "PayloadOffset": 246450,
-      "PayloadLength": 2031,
+      "PayloadLength": 2639,
       "PayloadDebugContentSnippet": "<?xml version=\"1.0\" encoding=\"",
       "Inputs": [],
       "Outputs": [
         "/Users/mateolarreaferro/Desktop/app test/Info.plist"
+      ],
+      "StatSignatures": [
+        {
+          "File": "/Users/mateolarreaferro/Desktop/app test/Info.plist"
+        }
       ],
       "DebugActionIndex": 2991
     },
@@ -46024,7 +46029,7 @@
       "Annotation": "WriteText /Users/mateolarreaferro/Desktop/app test/Unity-iPhone/Images.xcassets/AppIcon.appiconset/Contents.json",
       "DisplayName": "Writing Contents.json",
       "ActionType": "WriteFile",
-      "PayloadOffset": 248615,
+      "PayloadOffset": 249223,
       "PayloadLength": 661,
       "PayloadDebugContentSnippet": "{\n\t\"images\" : [\n\t\t{\n\t\t\t\"filena",
       "Inputs": [],
@@ -46037,7 +46042,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/AppleRequiredReasonCSharpAPIs.txt_kfm7.info",
       "DisplayName": "Writing AppleRequiredReasonCSharpAPIs.txt_kfm7.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 249387,
+      "PayloadOffset": 249995,
       "PayloadLength": 5162,
       "PayloadDebugContentSnippet": "{\"PrivacyManifests+RequiredRea",
       "Inputs": [],
@@ -46213,7 +46218,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/PrivacyInfo.xcprivacy_uuqz.info",
       "DisplayName": "Writing PrivacyInfo.xcprivacy_uuqz.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 254648,
+      "PayloadOffset": 255256,
       "PayloadLength": 629,
       "PayloadDebugContentSnippet": "{\"System.String[]\":[\"/Applicat",
       "Inputs": [],
@@ -46291,8 +46296,8 @@
       "Annotation": "WriteText /Users/mateolarreaferro/Desktop/app test/Unity-iPhone.xcodeproj/project.pbxproj",
       "DisplayName": "Writing project.pbxproj",
       "ActionType": "WriteFile",
-      "PayloadOffset": 255388,
-      "PayloadLength": 211492,
+      "PayloadOffset": 255996,
+      "PayloadLength": 211876,
       "PayloadDebugContentSnippet": "// !$*UTF8*$!\n{\n\tarchiveVersio",
       "Inputs": [],
       "Outputs": [
@@ -46304,7 +46309,7 @@
       "Annotation": "WriteText /Users/mateolarreaferro/Desktop/app test/Unity-iPhone.xcodeproj/xcshareddata/xcschemes/Unity-iPhone.xcscheme",
       "DisplayName": "Writing Unity-iPhone.xcscheme",
       "ActionType": "WriteFile",
-      "PayloadOffset": 467020,
+      "PayloadOffset": 468012,
       "PayloadLength": 3343,
       "PayloadDebugContentSnippet": "<?xml version=\"1.0\" encoding=\"",
       "Inputs": [],
@@ -49294,12 +49299,6 @@
       "File": "/Applications/Unity/Hub/Editor/2022.3.48f1/PlaybackEngines/iOSSupport/Trampoline/Classes/Unity/InternalProfiler.h"
     },
     {
-      "File": "/Applications/Unity/Hub/Editor/2022.3.48f1/PlaybackEngines/iOSSupport/Trampoline/Info.plist"
-    },
-    {
-      "File": "/Applications/Unity/Hub/Editor/2022.3.48f1/PlaybackEngines/iOSSupport/Trampoline/Unity-iPhone.xcodeproj/project.pbxproj"
-    },
-    {
       "File": "/Applications/Unity/Hub/Editor/2022.3.48f1/PlaybackEngines/iOSSupport/Trampoline/Unity-iPhone.xcodeproj/xcshareddata/xcschemes/Unity-iPhone.xcscheme"
     },
     {
@@ -49534,6 +49533,9 @@
     },
     {
       "File": "/Applications/Unity/Hub/Editor/2022.3.48f1/Unity.app/Contents/il2cpp/libil2cpptiny"
+    },
+    {
+      "File": "/Users/mateolarreaferro/Desktop/app test/Unity-iPhone.xcodeproj"
     },
     {
       "File": "/Users/mateolarreaferro/Desktop/Cobra/getconf"

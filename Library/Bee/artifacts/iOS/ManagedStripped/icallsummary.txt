@@ -766,7 +766,9 @@ UnityEngine.PlayerConnectionInternal::RegisterInternal
 UnityEngine.PlayerConnectionInternal::SendMessage
 UnityEngine.PlayerConnectionInternal::UnregisterInternal
 UnityEngine.PlayerPrefs::HasKey
+UnityEngine.PlayerPrefs::TrySetInt
 UnityEngine.PlayerPrefs::TrySetSetString
+UnityEngine.PlayerPrefs::GetInt
 UnityEngine.PlayerPrefs::GetString
 UnityEngine.PlayerPrefs::Save
 UnityEngine.Profiling.Profiler::get_enabled

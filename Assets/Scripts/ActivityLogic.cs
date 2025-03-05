@@ -40,6 +40,15 @@ public class ActivityLogic : MonoBehaviour
 
     private void Awake()
     {
+        // Load saved points from PlayerPrefs (default to 0 if not found)
+        points = PlayerPrefs.GetInt("PlayerPoints", 0);
+
+        // Update the UI text with loaded points
+        if (pointsText != null)
+        {
+            pointsText.text = points.ToString();
+        }
+
         // Combine all activity arrays into one for random selection.
         allActivityCards = walkingCards.Concat(bodyWeightCards).Concat(dietCards).ToArray();
     }
@@ -156,6 +165,12 @@ public class ActivityLogic : MonoBehaviour
     
         // Add a point.
         points++;
+    
+        // Save the updated points value
+        PlayerPrefs.SetInt("PlayerPoints", points);
+        PlayerPrefs.Save();
+    
+        // Update UI text
         if (pointsText != null)
         {
             pointsText.text = points.ToString();
