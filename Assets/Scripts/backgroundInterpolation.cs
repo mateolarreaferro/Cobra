@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundInterpolation : MonoBehaviour
 {
     [SerializeField] private Camera _camera; // Reference to the Camera
-    [SerializeField] [Range(0f, 0.4f)] private float interpolationSpeed = 0.25f; // Speed of color transition
+    [SerializeField] [Range(0f, 0.4f)] private float interpolationSpeed = 0.2f; // Speed of color transition
 
     // Pastel versions of the new brand colors
     private Color[] colors = new Color[]
@@ -16,17 +16,12 @@ public class BackgroundInterpolation : MonoBehaviour
         // #D0FAFA (pastel version of #00F5F5)
         new Color(0.82f, 0.98f, 0.98f),
 
-        // #FFD1E6 (pastel version of #fe47b3)
-        new Color(1.00f, 0.82f, 0.90f),
-
         // #E0FBD1 (pastel version of #a6e866)
         new Color(0.88f, 0.98f, 0.82f),
 
         // #FFE6CC (pastel version of #ff9a26)
         new Color(1.00f, 0.90f, 0.80f),
 
-        // #ECD1F5 (pastel version of #d57be9)
-        new Color(0.93f, 0.82f, 0.96f)
     };
 
     private int currentColorIndex = 0; // Index of the current color in the array

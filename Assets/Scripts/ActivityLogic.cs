@@ -33,7 +33,11 @@ public class ActivityLogic : MonoBehaviour
     private Coroutine disableCardCoroutine;
     
     private int points = 0;
-    
+
+    [Header("Celebration Effects")]
+    // Reference to the confetti ParticleSystem.
+    [SerializeField] private ParticleSystem confettiParticle;
+
     private void Awake()
     {
         // Combine all activity arrays into one for random selection.
@@ -143,7 +147,7 @@ public class ActivityLogic : MonoBehaviour
     
     /// <summary>
     /// Called when the user completes the card.
-    /// Adds a point, triggers the shrink animation on the instruction card,
+    /// Adds a point, triggers the confetti effect, triggers the shrink animation on the instruction card,
     /// and after the animation resets the UI.
     /// </summary>
     public void CompleteCard()
@@ -155,6 +159,12 @@ public class ActivityLogic : MonoBehaviour
         if (pointsText != null)
         {
             pointsText.text = points.ToString();
+        }
+    
+        // Trigger confetti effect.
+        if (confettiParticle != null)
+        {
+            StartCoroutine(PlayConfettiEffect());
         }
     
         // Trigger shrink animation on the instruction card.
@@ -282,5 +292,18 @@ public class ActivityLogic : MonoBehaviour
     
         OnInstructionCardTurnedOff?.Invoke();
         disableCardCoroutine = null;
+    }
+    
+    /// <summary>
+    /// Coroutine to play the confetti effect for a set duration.
+    /// It plays the particle system, waits for 1 second to let it emit,
+    /// then stops emission while letting the already emitted particles finish their lifetimes.
+    /// </summary>
+    private IEnumerator PlayConfettiEffect()
+    {
+        confettiParticle.Play();
+        yield return new WaitForSeconds(1f);
+        // Stops emitting new particles without clearing existing ones.
+        confettiParticle.Stop(false, ParticleSystemStopBehavior.StopEmitting);
     }
 }

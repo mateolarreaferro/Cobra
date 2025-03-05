@@ -417,6 +417,7 @@
 "Assets/Scripts/backgroundCircleAnim.cs"
 "Assets/Scripts/backgroundInterpolation.cs"
 "Assets/Scripts/breathingAnimation.cs"
+"Assets/Scripts/ConfettiController.cs"
 "Assets/Scripts/debugButtons.cs"
 "Assets/Scripts/GrowAndShrink.cs"
 "Assets/Scripts/notificationManager.cs"
