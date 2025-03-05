@@ -586,7 +586,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2292671045211695275, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: ----------TOP UI ------------
+      objectReference: {fileID: 0}
+    - target: {fileID: 2292671045211695275, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2360327846533203467, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_text
@@ -2624,12 +2628,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -639.54315, y: -1599.0116, z: 776.989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 955921002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -3106,7 +3110,7 @@ GameObject:
   - component: {fileID: 855417661}
   - component: {fileID: 855417660}
   m_Layer: 0
-  m_Name: Wheel
+  m_Name: Wheel & Activity Logic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3394,6 +3398,40 @@ MonoBehaviour:
   duration: 2
   easeType: 2
   growOnEnable: 0
+--- !u!1 &955921001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 955921002}
+  m_Layer: 0
+  m_Name: ----------BASICS------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &955921002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955921001}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 639.54315, y: 1599.0116, z: -786.989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 519420032}
+  - {fileID: 1388793077}
+  - {fileID: 1300617390}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &998640237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6146116041617712619, guid: 7d829cf756d714bc0a2e92c2cca4838d, type: 3}
@@ -3945,12 +3983,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300617387}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -639.54315, y: -1599.0116, z: 786.989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 955921002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1334809127 stripped
 GameObject:
@@ -4116,12 +4154,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388793075}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -639.54315, y: -1599.0116, z: 786.989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 955921002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!169 &1388793078
 AudioLowPassFilter:
@@ -4159,7 +4197,7 @@ GameObject:
   - component: {fileID: 1393177529}
   - component: {fileID: 1393177528}
   m_Layer: 0
-  m_Name: Up Arrow
+  m_Name: Up Arrow Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4678,7 +4716,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2292671045211695275, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_Name
-      value: UI
+      value: ----------STREAK&POINTS------------
+      objectReference: {fileID: 0}
+    - target: {fileID: 2292671045211695275, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3104107214245476689, guid: 34eb63449d41e43fbad0109927798dad, type: 3}
       propertyPath: m_LocalScale.x
@@ -5510,9 +5552,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
+  - {fileID: 955921002}
   - {fileID: 855417656}
-  - {fileID: 1388793077}
-  - {fileID: 1300617390}
   - {fileID: 184557800}
   - {fileID: 2141393029}
