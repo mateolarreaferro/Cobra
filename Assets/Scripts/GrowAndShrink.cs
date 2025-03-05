@@ -54,8 +54,6 @@ public class GrowAndShrink : MonoBehaviour
     /// <summary>
     /// Grows this GameObject's transform to the specified target scale over the given duration.
     /// </summary>
-    /// <param name="targetScale">The desired target scale.</param>
-    /// <param name="time">Duration of the animation in seconds.</param>
     public void Grow(Vector3 targetScale, float time)
     {
         // If an animation is already running, stop it.
@@ -78,8 +76,6 @@ public class GrowAndShrink : MonoBehaviour
     /// <summary>
     /// Shrinks this GameObject's transform to the specified target scale over the given duration.
     /// </summary>
-    /// <param name="targetScale">The desired target scale.</param>
-    /// <param name="time">Duration of the animation in seconds.</param>
     public void Shrink(Vector3 targetScale, float time)
     {
         // If an animation is already running, stop it.
@@ -92,9 +88,15 @@ public class GrowAndShrink : MonoBehaviour
 
     /// <summary>
     /// Shrinks this GameObject and then disables it when the shrink animation is complete.
+    /// Checks if the GameObject is active before attempting to start the coroutine.
     /// </summary>
     public void ShrinkAndDisable()
     {
+        // If this GameObject is inactive, do nothing.
+        if (!gameObject.activeInHierarchy)
+        {
+            return;
+        }
         // Stop any running animations first.
         if (currentAnim != null)
         {
@@ -117,14 +119,14 @@ public class GrowAndShrink : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / time);
 
-            // Evaluate t with the chosen easing function
+            // Evaluate t with the chosen easing function.
             float easedT = EvaluateEase(t, easeType);
 
             transform.localScale = Vector3.Lerp(startScale, targetScale, easedT);
             yield return null;
         }
 
-        // Ensure final scale is set
+        // Ensure final scale is set.
         transform.localScale = targetScale;
     }
 
@@ -142,23 +144,23 @@ public class GrowAndShrink : MonoBehaviour
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / time);
 
-            // Evaluate t with the chosen easing function
+            // Evaluate t with the chosen easing function.
             float easedT = EvaluateEase(t, easeType);
 
             transform.localScale = Vector3.Lerp(startScale, targetScale, easedT);
             yield return null;
         }
 
-        // Ensure final scale is set
+        // Ensure final scale is set.
         transform.localScale = targetScale;
 
-        // Disable the GameObject
+        // Disable the GameObject.
         gameObject.SetActive(false);
     }
 
     /// <summary>
     /// Returns the eased value of t based on the selected ease type.
-    /// These are simplified versions of common easing formulas (similar to DOTween styles).
+    /// These are simplified versions of common easing formulas.
     /// </summary>
     private float EvaluateEase(float t, ScaleEase ease)
     {
@@ -168,16 +170,13 @@ public class GrowAndShrink : MonoBehaviour
                 return t;
 
             case ScaleEase.EaseInCubic:
-                // f(t) = t^3
                 return t * t * t;
 
             case ScaleEase.EaseOutCubic:
-                // f(t) = 1 - (1 - t)^3
                 float tInv = 1f - t;
                 return 1f - tInv * tInv * tInv;
 
             case ScaleEase.EaseInOutCubic:
-                // f(t) = 4t^3 if t < 0.5 else 1 - (-2t + 2)^3 / 2
                 if (t < 0.5f)
                 {
                     return 4f * t * t * t;
@@ -189,7 +188,6 @@ public class GrowAndShrink : MonoBehaviour
                 }
 
             case ScaleEase.EaseInBounce:
-                // In-bounce is just 1 - outBounce(1 - t)
                 return 1f - EaseOutBounce(1f - t);
 
             case ScaleEase.EaseOutBounce:
@@ -202,7 +200,6 @@ public class GrowAndShrink : MonoBehaviour
 
     /// <summary>
     /// A common formula for 'EaseOutBounce'.
-    /// (Similar to DOTween's easeOutBounce implementation.)
     /// </summary>
     private float EaseOutBounce(float t)
     {
