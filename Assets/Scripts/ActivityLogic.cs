@@ -14,6 +14,7 @@ public class ActivityLogic : MonoBehaviour
     [SerializeField] private GameObject ActivityCategories; // Disabled when card is displayed
     [SerializeField] private GameObject CardOptions;         // Enabled when card is displayed
     [SerializeField] private TMP_Text pointsText;            // Displays the current points
+    [SerializeField] private TMP_Text streakText;            // Displays the daily streak
 
     [Header("Activity Cards")]
     [SerializeField] private GameObject[] walkingCards;
@@ -40,19 +41,78 @@ public class ActivityLogic : MonoBehaviour
 
     private void Awake()
     {
+        // Update daily streak on app launch.
+        UpdateDailyStreak();
+
         // Load saved points from PlayerPrefs (default to 0 if not found)
         points = PlayerPrefs.GetInt("PlayerPoints", 0);
 
-        // Update the UI text with loaded points
+        // Update the UI texts with the loaded values.
         if (pointsText != null)
         {
             pointsText.text = points.ToString();
+        }
+        if (streakText != null)
+        {
+            int streak = PlayerPrefs.GetInt("Streak", 0);
+            streakText.text = streak.ToString();
         }
 
         // Combine all activity arrays into one for random selection.
         allActivityCards = walkingCards.Concat(bodyWeightCards).Concat(dietCards).ToArray();
     }
-    
+
+    /// <summary>
+    /// Checks if today is a new day compared to the last login and updates the streak.
+    /// If the last login was yesterday, the streak increments; otherwise, it resets to 1.
+    /// </summary>
+    private void UpdateDailyStreak()
+    {
+        // Use "yyyyMMdd" so we only compare the date portion.
+        string today = DateTime.Now.ToString("yyyyMMdd");
+        string lastLoginDate = PlayerPrefs.GetString("LastLoginDate", "");
+        int streak = PlayerPrefs.GetInt("Streak", 0);
+
+        // If the user has already logged in today, no need to update.
+        if (lastLoginDate == today)
+        {
+            return;
+        }
+        else
+        {
+            if (!string.IsNullOrEmpty(lastLoginDate))
+            {
+                DateTime lastLogin;
+                if (DateTime.TryParseExact(lastLoginDate, "yyyyMMdd", null, System.Globalization.DateTimeStyles.None, out lastLogin))
+                {
+                    // If last login was exactly yesterday, increment the streak.
+                    if (lastLogin.AddDays(1).ToString("yyyyMMdd") == today)
+                    {
+                        streak++;
+                    }
+                    else
+                    {
+                        // If more than one day has passed, reset the streak.
+                        streak = 1;
+                    }
+                }
+                else
+                {
+                    streak = 1;
+                }
+            }
+            else
+            {
+                // First time login.
+                streak = 1;
+            }
+            // Save the updated streak and current login date.
+            PlayerPrefs.SetInt("Streak", streak);
+            PlayerPrefs.SetString("LastLoginDate", today);
+            PlayerPrefs.Save();
+        }
+    }
+
     public void SetWalking()
     {
         CancelInstruction(); // Hide any active instruction immediately.
@@ -148,9 +208,6 @@ public class ActivityLogic : MonoBehaviour
                 ActivityCategories.SetActive(false);
             if (CardOptions != null)
                 CardOptions.SetActive(true);
-    
-            // Optionally, you can start a fallback auto-hide coroutine if desired.
-            // disableCardCoroutine = StartCoroutine(DisableCardAfterDelay(selectedCard, 5f));
         }
     }
     
@@ -166,11 +223,11 @@ public class ActivityLogic : MonoBehaviour
         // Add a point.
         points++;
     
-        // Save the updated points value
+        // Save the updated points value.
         PlayerPrefs.SetInt("PlayerPoints", points);
         PlayerPrefs.Save();
     
-        // Update UI text
+        // Update UI text.
         if (pointsText != null)
         {
             pointsText.text = points.ToString();
@@ -318,7 +375,6 @@ public class ActivityLogic : MonoBehaviour
     {
         confettiParticle.Play();
         yield return new WaitForSeconds(1f);
-        // Stops emitting new particles without clearing existing ones.
         confettiParticle.Stop(false, ParticleSystemStopBehavior.StopEmitting);
     }
 }
