@@ -20906,7 +20906,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GrowAndShrink_op_Inequality_m3C
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationController_op_Implicit_m1FD047F10D5BDF69DF110E9EF38EE38254B89C52 (const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationManager_op_Implicit_m4194132599551033FCB86A34BB0CFECF9788B30F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -20936,7 +20936,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationController_op_Impli
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationController_op_Equality_m997929D149C96807658472EE4D9EB46548C4C0BA (const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationManager_op_Equality_m97DB9953BBF0E53179EBAFE88B1815E9441B896D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -20970,7 +20970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationController_op_Equal
 		return;
 	}
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationController_op_Inequality_mE22DCAC7486EA60471438CE5211C929151ACA9EF (const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationManager_op_Inequality_mC623A6683DCC1619EB46FA1FC7DB2B526A910A6D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)

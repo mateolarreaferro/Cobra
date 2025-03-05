@@ -3,7 +3,7 @@
     {
       "type": "il2cppData",
       "msg": {
-        "build_event_id": "bc483446d1ba94f4d91a6d3101511a87",
+        "build_event_id": "b1c78083c8e2b4847a328ed56e82ea51",
         "node_executed": true,
         "attribute_total_count_eager_static_constructor": 17,
         "attribute_total_count_set_option": 0,
@@ -42,24 +42,197 @@
     {
       "type": "playerBuildTimingData",
       "msg": {
-        "build_event_id": "bc483446d1ba94f4d91a6d3101511a87",
-        "build_player": 42559,
-        "preprocess_player": 6252,
-        "produce_player_script_assemblies": 2571,
-        "build_scripts_dlls": 15,
-        "postprocess_built_player": 32942,
+        "build_event_id": "b1c78083c8e2b4847a328ed56e82ea51",
+        "build_player": 51854,
+        "preprocess_player": 14398,
+        "produce_player_script_assemblies": 7718,
+        "build_scripts_dlls": 18,
+        "writing_asset_files": 281,
+        "postprocess_built_player": 26712,
         "node_summary_table": [
           {
             "name": "Csc",
-            "duration": 625
+            "duration": 470
+          },
+          {
+            "name": "Csc",
+            "duration": 241
+          },
+          {
+            "name": "Csc",
+            "duration": 162
+          },
+          {
+            "name": "Csc",
+            "duration": 641
+          },
+          {
+            "name": "Csc",
+            "duration": 431
+          },
+          {
+            "name": "Csc",
+            "duration": 134
+          },
+          {
+            "name": "Csc",
+            "duration": 1379
+          },
+          {
+            "name": "Csc",
+            "duration": 167
+          },
+          {
+            "name": "Csc",
+            "duration": 317
+          },
+          {
+            "name": "Csc",
+            "duration": 242
+          },
+          {
+            "name": "Csc",
+            "duration": 478
+          },
+          {
+            "name": "Csc",
+            "duration": 177
+          },
+          {
+            "name": "Csc",
+            "duration": 192
+          },
+          {
+            "name": "Csc",
+            "duration": 366
+          },
+          {
+            "name": "Csc",
+            "duration": 118
+          },
+          {
+            "name": "Csc",
+            "duration": 370
+          },
+          {
+            "name": "Csc",
+            "duration": 154
+          },
+          {
+            "name": "Csc",
+            "duration": 918
+          },
+          {
+            "name": "Csc",
+            "duration": 543
+          },
+          {
+            "name": "Csc",
+            "duration": 122
+          },
+          {
+            "name": "Csc",
+            "duration": 323
+          },
+          {
+            "name": "Csc",
+            "duration": 162
+          },
+          {
+            "name": "Csc",
+            "duration": 320
+          },
+          {
+            "name": "Csc",
+            "duration": 699
+          },
+          {
+            "name": "Csc",
+            "duration": 624
+          },
+          {
+            "name": "Csc",
+            "duration": 203
+          },
+          {
+            "name": "Csc",
+            "duration": 222
+          },
+          {
+            "name": "Csc",
+            "duration": 143
+          },
+          {
+            "name": "Csc",
+            "duration": 320
+          },
+          {
+            "name": "Csc",
+            "duration": 169
+          },
+          {
+            "name": "Csc",
+            "duration": 272
+          },
+          {
+            "name": "Csc",
+            "duration": 339
+          },
+          {
+            "name": "Csc",
+            "duration": 600
+          },
+          {
+            "name": "Csc",
+            "duration": 174
+          },
+          {
+            "name": "Csc",
+            "duration": 363
+          },
+          {
+            "name": "Csc",
+            "duration": 478
+          },
+          {
+            "name": "Csc",
+            "duration": 220
+          },
+          {
+            "name": "Csc",
+            "duration": 272
+          },
+          {
+            "name": "Csc",
+            "duration": 315
+          },
+          {
+            "name": "Csc",
+            "duration": 309
+          },
+          {
+            "name": "Csc",
+            "duration": 917
+          },
+          {
+            "name": "Csc",
+            "duration": 541
+          },
+          {
+            "name": "Csc",
+            "duration": 434
+          },
+          {
+            "name": "Csc",
+            "duration": 295
           },
           {
             "name": "UnityLinker.exe",
-            "duration": 4134
+            "duration": 5109
           },
           {
             "name": "il2cpp.exe",
-            "duration": 5771
+            "duration": 7192
           }
         ]
       },
@@ -68,13 +241,13 @@
     {
       "type": "unityLinkerData",
       "msg": {
-        "build_event_id": "bc483446d1ba94f4d91a6d3101511a87",
+        "build_event_id": "b1c78083c8e2b4847a328ed56e82ea51",
         "node_executed": true,
         "attribute_marked_count_always_link_assembly": 1,
         "attribute_swept_count_always_link_assembly": 0,
         "attribute_total_count_always_link_assembly": 1,
-        "attribute_marked_count_preserve": 887,
-        "attribute_total_count_preserve": 880,
+        "attribute_marked_count_preserve": 893,
+        "attribute_total_count_preserve": 886,
         "attribute_total_count_preserve_body": 0,
         "attribute_marked_count_required_member": 14,
         "attribute_swept_count_required_member": 8,
@@ -82,45 +255,45 @@
         "attribute_marked_count_require_derived": 16,
         "attribute_swept_count_require_derived": 0,
         "attribute_total_count_require_derived": 1,
-        "attribute_marked_count_require_implementors": 0,
-        "attribute_swept_count_require_implementors": 0,
-        "attribute_total_count_require_implementors": 0,
+        "attribute_marked_count_require_implementors": 3,
+        "attribute_swept_count_require_implementors": 8,
+        "attribute_total_count_require_implementors": 12,
         "attribute_total_count_required_interface": 0,
         "attribute_marked_count_require_attribute_usages": 2,
         "attribute_total_count_require_attribute_usages": 1,
         "attribute_total_count_dynamic_dependency": 0,
-        "attribute_marked_count_dynamic_dependency": 77,
-        "attribute_swept_count_dynamic_dependency": -77,
-        "assembly_counts_total_in": 110,
-        "assembly_counts_link": 49,
+        "attribute_marked_count_dynamic_dependency": 109,
+        "attribute_swept_count_dynamic_dependency": -109,
+        "assembly_counts_total_in": 121,
+        "assembly_counts_link": 68,
         "assembly_counts_copy": 10,
-        "assembly_counts_delete": 51,
-        "assembly_counts_total_out": 59,
+        "assembly_counts_delete": 43,
+        "assembly_counts_total_out": 78,
         "unresolved_stubbing_total_count": 0,
         "unresolved_stubbing_missing_interface_method_count": 0,
         "unresolved_stubbing_missing_abstract_class_method_count": 0,
         "unresolved_stubbing_missing_type_count": 0,
         "unresolved_stubbing_missing_method_count": 0,
-        "unrecognized_reflection_access_total_count": 440,
-        "unrecognized_reflection_access_core_count": 218,
+        "unrecognized_reflection_access_total_count": 686,
+        "unrecognized_reflection_access_core_count": 363,
         "unrecognized_reflection_access_unity_count": 216,
-        "unrecognized_reflection_access_user_count": 6,
-        "recognized_reflection_access_total_count": 59,
-        "recognized_reflection_access_core_count": 40,
+        "unrecognized_reflection_access_user_count": 107,
+        "recognized_reflection_access_total_count": 106,
+        "recognized_reflection_access_core_count": 82,
         "recognized_reflection_access_unity_count": 19,
-        "recognized_reflection_access_user_count": 0,
-        "link_xml_total_count": 11,
-        "link_xml_embedded_count": 1,
+        "recognized_reflection_access_user_count": 5,
+        "link_xml_total_count": 13,
+        "link_xml_embedded_count": 2,
         "link_xml_embedded_unity_count": 0,
-        "link_xml_embedded_user_count": 0,
-        "link_xml_file_count": 10,
+        "link_xml_embedded_user_count": 1,
+        "link_xml_file_count": 11,
         "link_xml_assembly_preserve_all_total_count": 3,
         "link_xml_assembly_preserve_all_unity_count": 3,
         "link_xml_assembly_preserve_all_core_count": 0,
         "link_xml_assembly_preserve_all_user_count": 0,
         "engine_module_total_in": 63,
-        "engine_module_deleted": 37,
-        "engine_module_total_out": 26,
+        "engine_module_deleted": 32,
+        "engine_module_total_out": 31,
         "option_rule_set": "Conservative",
         "option_enable_report": false,
         "option_enable_snapshot": false,

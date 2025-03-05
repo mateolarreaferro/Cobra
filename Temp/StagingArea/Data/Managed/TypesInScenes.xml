@@ -6,6 +6,7 @@
 		<type fullname="BreathingAnimation" preserve="nothing"/>
 		<type fullname="debugButtons" preserve="nothing"/>
 		<type fullname="GrowAndShrink" preserve="nothing"/>
+		<type fullname="NotificationManager" preserve="nothing"/>
 		<type fullname="RectTransformScaler" preserve="nothing"/>
 		<type fullname="Selected" preserve="nothing"/>
 		<type fullname="SliderText" preserve="nothing"/>
@@ -78,6 +79,7 @@
 		<type fullname="UnityEditor.PlayerSettings" preserve="nothing"/>
 		<type fullname="UnityEditor.TagManager" preserve="nothing"/>
 		<type fullname="UnityEditor.TimeManager" preserve="nothing"/>
+		<type fullname="UnityEditor.UnityConnectSettings" preserve="nothing"/>
 		<type fullname="UnityEditor.VFXManager" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioBehaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioClip" preserve="nothing"/>

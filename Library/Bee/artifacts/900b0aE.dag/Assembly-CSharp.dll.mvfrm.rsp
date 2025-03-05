@@ -42,6 +42,12 @@ Library/Bee/artifacts/mvdfrm/Unity.RenderPipelines.Core.ShaderLibrary.ref.dll_8C
 Library/Bee/artifacts/mvdfrm/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.ref.dll_E4B872C7B6BFBD55.mvfrm
 Library/Bee/artifacts/mvdfrm/Unity.Rider.Editor.ref.dll_58BAED9DE5C1964C.mvfrm
 Library/Bee/artifacts/mvdfrm/Unity.Searcher.Editor.ref.dll_E152FEF1422B5381.mvfrm
+Library/Bee/artifacts/mvdfrm/Unity.Services.Analytics.ref.dll_8A4CA7E0BDA2E611.mvfrm
+Library/Bee/artifacts/mvdfrm/Unity.Services.Core.Analytics.ref.dll_FD66879B60C7F5B2.mvfrm
+Library/Bee/artifacts/mvdfrm/Unity.Services.Core.Environments.ref.dll_A46F9ABD0EDC066A.mvfrm
+Library/Bee/artifacts/mvdfrm/Unity.Services.Core.ref.dll_7E81C44967154A2A.mvfrm
+Library/Bee/artifacts/mvdfrm/Unity.Services.PushNotifications.Editor.ref.dll_F0AEEBDAD40850D8.mvfrm
+Library/Bee/artifacts/mvdfrm/Unity.Services.PushNotifications.ref.dll_19444467C3319069.mvfrm
 Library/Bee/artifacts/mvdfrm/Unity.ShaderGraph.Editor.ref.dll_3A735E511CF8B54D.mvfrm
 Library/Bee/artifacts/mvdfrm/Unity.Subsystem.Registration.ref.dll_EB2FB299300D52B3.mvfrm
 Library/Bee/artifacts/mvdfrm/Unity.TextMeshPro.Editor.ref.dll_40C14F454DBEB703.mvfrm

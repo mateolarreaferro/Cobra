@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - BackgroundInterpolation
     - BreathingAnimation
     - GrowAndShrink
+    - NotificationManager
     - RectTransformScaler
     - Selected
     - Wheel
@@ -438,6 +439,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 23420}
     - Class: 114
       Script: {instanceID: 23568}
+    - Class: 114
+      Script: {instanceID: 23710}
     - Class: 114
       Script: {instanceID: 23760}
     - Class: 114
@@ -1557,10 +1560,10 @@ ScriptsOnlyBuild:
     className: LensFlareComponentSRP
   - hash:
       serializedVersion: 2
-      Hash: e45028f507c1f78c4c819449745679b8
+      Hash: eb685b9b2463fa391afdb57114ea0817
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: NotificationController
+    className: NotificationManager
   - hash:
       serializedVersion: 2
       Hash: e987953190eb4c12cf19df790566dc2c
@@ -1635,7 +1638,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 3c8587c5d24d5ab68f0f6ba19941b8f0
+      Hash: 8119a3743c22983919c6da9873135d13
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ActivityLogic
@@ -2257,6 +2260,24 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ConfettiController
+  - hash:
+      serializedVersion: 2
+      Hash: 95d343787a1634ed2899313cc1dbe49a
+    assemblyName: Unity.Services.PushNotifications
+    namespaceName: Unity.Services.PushNotifications
+    className: PushNotificationSettings
+  - hash:
+      serializedVersion: 2
+      Hash: ac2ed6a2c9fc8b48a0164f3db9a8a31a
+    assemblyName: Unity.Services.PushNotifications
+    namespaceName: Unity.Services.PushNotifications
+    className: PushNotificationsContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 0d747ec795ab2152db7f0cf9c5cef80b
+    assemblyName: Unity.Services.Analytics
+    namespaceName: Unity.Services.Analytics
+    className: AnalyticsContainer
   platform: 9
   scenePathNames:
   - Assets/Scenes/Cobra_Demo_2.unity

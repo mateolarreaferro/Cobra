@@ -4672,7 +4672,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnalyticsIdentifier_tE867F385ABAC820C67EC52E1
 		L_2 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(__this, NULL);
 		NullCheck(L_2);
 		String_t* L_3;
-		L_3 = VirtualFuncInvoker0< String_t* >::Invoke(25, L_2);
+		L_3 = VirtualFuncInvoker0< String_t* >::Invoke(26, L_2);
 		NullCheck(L_1);
 		L_1->___Identifier = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___Identifier), (void*)L_3);
@@ -4681,7 +4681,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnalyticsIdentifier_tE867F385ABAC820C67EC52E1
 		L_5 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(__this, NULL);
 		NullCheck(L_5);
 		String_t* L_6;
-		L_6 = VirtualFuncInvoker0< String_t* >::Invoke(23, L_5);
+		L_6 = VirtualFuncInvoker0< String_t* >::Invoke(24, L_5);
 		NullCheck(L_4);
 		L_4->___Namespace = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&L_4->___Namespace), (void*)L_6);
