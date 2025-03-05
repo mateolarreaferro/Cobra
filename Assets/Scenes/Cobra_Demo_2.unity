@@ -3291,19 +3291,7 @@ MonoBehaviour:
   - {fileID: 1581628095}
   OnInstructionCardTurnedOff:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 855736572}
-        m_TargetAssemblyTypeName: GrowAndShrink, Assembly-CSharp
-        m_MethodName: ShrinkAndDisable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &855736568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4309950164749249936, guid: 7d829cf756d714bc0a2e92c2cca4838d, type: 3}
@@ -3314,17 +3302,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6918411557003207587, guid: 7d829cf756d714bc0a2e92c2cca4838d, type: 3}
   m_PrefabInstance: {fileID: 23425431554880825}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &855736572 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1470320092971055696, guid: 7d829cf756d714bc0a2e92c2cca4838d, type: 3}
-  m_PrefabInstance: {fileID: 23425431554880825}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855736568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5686ee835424660a06b24e8b744424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &855736573 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1535749523682251234, guid: 7d829cf756d714bc0a2e92c2cca4838d, type: 3}

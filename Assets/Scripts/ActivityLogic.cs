@@ -114,15 +114,14 @@ public class ActivityLogic : MonoBehaviour
     
         if (selectedCard != null)
         {
-            // Enable the instruction card.
+            // Enable the instruction card and trigger its grow animation.
             if (instructionCard != null && !instructionCard.activeSelf)
             {
                 instructionCard.SetActive(true);
-                // Trigger the grow animation if the instruction card has a GrowAndShrink component.
                 GrowAndShrink growScript = instructionCard.GetComponent<GrowAndShrink>();
                 if(growScript != null)
                 {
-                    // Optionally reset the scale to its shrunk state before animating.
+                    // Reset scale to shrunk state and animate grow.
                     instructionCard.transform.localScale = growScript.shrunkScale;
                     growScript.Grow();
                 }
@@ -137,19 +136,19 @@ public class ActivityLogic : MonoBehaviour
             if (CardOptions != null)
                 CardOptions.SetActive(true);
     
-            // Optionally, start a fallback auto-hide coroutine if needed.
+            // Optionally, you can start a fallback auto-hide coroutine if desired.
             // disableCardCoroutine = StartCoroutine(DisableCardAfterDelay(selectedCard, 5f));
         }
     }
     
     /// <summary>
     /// Called when the user completes the card.
-    /// Adds a point, disables the instruction card and CardOptions,
-    /// and re-enables ActivityCategories.
+    /// Adds a point, triggers the shrink animation on the instruction card,
+    /// and after the animation resets the UI.
     /// </summary>
     public void CompleteCard()
     {
-        CancelInstruction();
+        CancelAutoHide();
     
         // Add a point.
         points++;
@@ -158,32 +157,49 @@ public class ActivityLogic : MonoBehaviour
             pointsText.text = points.ToString();
         }
     
-        // Disable the instruction card and CardOptions, and re-enable ActivityCategories.
+        // Trigger shrink animation on the instruction card.
         if (instructionCard != null)
-            instructionCard.SetActive(false);
-        if (CardOptions != null)
-            CardOptions.SetActive(false);
-        if (ActivityCategories != null)
-            ActivityCategories.SetActive(true);
+        {
+            GrowAndShrink growScript = instructionCard.GetComponent<GrowAndShrink>();
+            if (growScript != null)
+            {
+                growScript.ShrinkAndDisable();
+            }
+            else
+            {
+                instructionCard.SetActive(false);
+            }
+        }
+    
+        // Wait for the shrink animation to complete, then reset UI.
+        StartCoroutine(WaitAndResetUI());
     
         OnInstructionCardTurnedOff?.Invoke();
     }
     
     /// <summary>
     /// Called when the user discards the card.
-    /// Does not add a point, but disables the instruction card and CardOptions,
-    /// and re-enables ActivityCategories.
+    /// Does not add a point, but triggers the shrink animation on the instruction card,
+    /// and after the animation resets the UI.
     /// </summary>
     public void DiscardCard()
     {
-        CancelInstruction();
+        CancelAutoHide();
     
         if (instructionCard != null)
-            instructionCard.SetActive(false);
-        if (CardOptions != null)
-            CardOptions.SetActive(false);
-        if (ActivityCategories != null)
-            ActivityCategories.SetActive(true);
+        {
+            GrowAndShrink growScript = instructionCard.GetComponent<GrowAndShrink>();
+            if (growScript != null)
+            {
+                growScript.ShrinkAndDisable();
+            }
+            else
+            {
+                instructionCard.SetActive(false);
+            }
+        }
+    
+        StartCoroutine(WaitAndResetUI());
     
         OnInstructionCardTurnedOff?.Invoke();
     }
@@ -209,6 +225,41 @@ public class ActivityLogic : MonoBehaviour
     
         if (instructionCard != null)
             instructionCard.SetActive(false);
+    
+        if (CardOptions != null)
+            CardOptions.SetActive(false);
+        if (ActivityCategories != null)
+            ActivityCategories.SetActive(true);
+    }
+    
+    /// <summary>
+    /// Cancels any auto-hide coroutine without deactivating the instruction card.
+    /// </summary>
+    private void CancelAutoHide()
+    {
+        if (disableCardCoroutine != null)
+        {
+            StopCoroutine(disableCardCoroutine);
+            disableCardCoroutine = null;
+        }
+    }
+    
+    /// <summary>
+    /// Waits for the shrink animation duration (if available) then resets the UI:
+    /// disables CardOptions and re-enables ActivityCategories.
+    /// </summary>
+    private IEnumerator WaitAndResetUI()
+    {
+        float waitTime = 0.5f; // default fallback duration
+        if (instructionCard != null)
+        {
+            GrowAndShrink growScript = instructionCard.GetComponent<GrowAndShrink>();
+            if (growScript != null)
+            {
+                waitTime = growScript.duration;
+            }
+        }
+        yield return new WaitForSeconds(waitTime);
     
         if (CardOptions != null)
             CardOptions.SetActive(false);
