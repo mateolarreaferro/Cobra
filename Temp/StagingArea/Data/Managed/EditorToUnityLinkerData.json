@@ -178,13 +178,6 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "UnityConnectSettings",
-            "fullManagedTypeName": "UnityEditor.UnityConnectSettings",
-            "moduleName": "UnityConnect",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "VFXManager",
             "fullManagedTypeName": "UnityEditor.VFXManager",
             "moduleName": "VFX",

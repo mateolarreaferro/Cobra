@@ -3650,7 +3650,7 @@ IL_0028:
 		String_t* L_8 = ___0_scalerName;
 		NullCheck(L_7);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_9;
-		L_9 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17, L_7, L_8);
+		L_9 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(16, L_7, L_8);
 		V_1 = L_9;
 		bool L_10 = ___1_enabled;
 		if (L_10)
@@ -4712,7 +4712,7 @@ IL_001a:
 		Assembly_t* L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
 		NullCheck(L_7);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_8;
-		L_8 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(17, L_7);
+		L_8 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(15, L_7);
 		V_3 = L_8;
 		V_4 = 0;
 		goto IL_004f;
@@ -4730,7 +4730,7 @@ IL_0028:
 		Type_t* L_14 = V_5;
 		NullCheck(L_13);
 		bool L_15;
-		L_15 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(22, L_13, L_14);
+		L_15 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(21, L_13, L_14);
 		if (!L_15)
 		{
 			goto IL_0049;
@@ -17281,7 +17281,7 @@ IL_008b:
 		PropertyInfo_t* L_39 = L_38->___property;
 		NullCheck(L_39);
 		String_t* L_40;
-		L_40 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_39);
+		L_40 = VirtualFuncInvoker0< String_t* >::Invoke(7, L_39);
 		NullCheck(L_37);
 		PropertyInfo_t* L_41;
 		L_41 = Type_GetProperty_mD183124FC8A89121E8368058B327A7750B14281D(L_37, L_40, NULL);
@@ -17470,7 +17470,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass25_0_U3CApplyScaler
 		PropertyInfo_t* L_3 = __this->___property;
 		NullCheck(L_3);
 		String_t* L_4;
-		L_4 = VirtualFuncInvoker0< String_t* >::Invoke(8, L_3);
+		L_4 = VirtualFuncInvoker0< String_t* >::Invoke(7, L_3);
 		NullCheck(L_2);
 		bool L_5;
 		L_5 = String_Contains_m6D77B121FADA7CA5F397C0FABB65DA62DF03B6C3(L_2, L_4, NULL);

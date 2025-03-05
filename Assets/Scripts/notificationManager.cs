@@ -6,12 +6,21 @@ using Unity.Notifications.iOS;
 
 public class NotificationManager : MonoBehaviour
 {
-    // Set to true in the Inspector for testing (notifications every minute)
+    // Set to true in the Inspector for testing (notifications every minute).
     [SerializeField] private bool isDebug = false;
+
+    // Unique identifier for your daily notification.
+    private const string dailyNotificationId = "_daily_spin_notification";
 
     private void Start()
     {
+#if UNITY_IOS
+        // Remove any existing notification with the same ID to avoid duplicates.
+        iOSNotificationCenter.RemoveScheduledNotification(dailyNotificationId);
+        iOSNotificationCenter.RemoveDeliveredNotification(dailyNotificationId);
+
         ScheduleNotification();
+#endif
     }
 
     private void ScheduleNotification()
@@ -19,58 +28,62 @@ public class NotificationManager : MonoBehaviour
 #if UNITY_IOS
         if (isDebug)
         {
-            // Debug mode: schedule a notification every minute.
-            iOSNotificationTimeIntervalTrigger timeTrigger = new iOSNotificationTimeIntervalTrigger()
+            // DEBUG MODE: schedule a notification every 1 minute (repeating).
+            var debugTrigger = new iOSNotificationTimeIntervalTrigger()
             {
-                TimeInterval = new TimeSpan(0, 1, 0), // 1 minute interval
+                TimeInterval = new TimeSpan(0, 1, 0), // 1 minute
                 Repeats = true
             };
 
-            iOSNotification debugNotification = new iOSNotification()
+            var debugNotification = new iOSNotification()
             {
-                Identifier = "_debug_notification",
+                Identifier = dailyNotificationId,
                 Title = "Spin the Wheel!",
                 Body = "Debug: Spin the wheel and win rewards!",
                 ShowInForeground = true,
-                ForegroundPresentationOption = PresentationOption.Alert | PresentationOption.Sound,
-                Trigger = timeTrigger,
+                ForegroundPresentationOption = (PresentationOption.Alert | PresentationOption.Sound),
+                Trigger = debugTrigger,
             };
 
             iOSNotificationCenter.ScheduleNotification(debugNotification);
         }
         else
         {
-            // Normal mode: choose a random time between 4:00 PM and 6:00 PM.
-            int hour = UnityEngine.Random.Range(16, 18);
-            int minute = UnityEngine.Random.Range(0, 60);
+            // NORMAL MODE: schedule one notification per day between 4:00 PM and 6:00 PM.
+            int hour = UnityEngine.Random.Range(16, 18);  // 16 or 17
+            int minute = UnityEngine.Random.Range(0, 60); // 0–59
 
-            // Set the notification fire time for today.
+            // Construct the DateTime for today at the random hour/minute.
             DateTime fireTime = new DateTime(
                 DateTime.Now.Year,
                 DateTime.Now.Month,
                 DateTime.Now.Day,
                 hour,
                 minute,
-                0);
+                0
+            );
 
-            // If the time has already passed today, schedule for tomorrow.
+            // If we've already passed that time today, schedule it for tomorrow.
             if (fireTime < DateTime.Now)
             {
                 fireTime = fireTime.AddDays(1);
             }
 
-            // Create an iOS calendar trigger that repeats daily.
-            iOSNotificationCalendarTrigger calendarTrigger = new iOSNotificationCalendarTrigger()
+            // Calendar trigger for iOS, set to repeat daily.
+            var calendarTrigger = new iOSNotificationCalendarTrigger()
             {
+                Year = fireTime.Year,
+                Month = fireTime.Month,
+                Day = fireTime.Day,
                 Hour = fireTime.Hour,
                 Minute = fireTime.Minute,
                 Second = fireTime.Second,
                 Repeats = true
             };
 
-            iOSNotification notification = new iOSNotification()
+            var notification = new iOSNotification()
             {
-                Identifier = "_daily_spin_notification",
+                Identifier = dailyNotificationId,
                 Title = "Spin the Wheel!",
                 Body = "It's time to spin the wheel and win rewards!",
                 ShowInForeground = true,

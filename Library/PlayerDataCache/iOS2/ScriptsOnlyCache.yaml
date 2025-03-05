@@ -2260,24 +2260,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ConfettiController
-  - hash:
-      serializedVersion: 2
-      Hash: 95d343787a1634ed2899313cc1dbe49a
-    assemblyName: Unity.Services.PushNotifications
-    namespaceName: Unity.Services.PushNotifications
-    className: PushNotificationSettings
-  - hash:
-      serializedVersion: 2
-      Hash: ac2ed6a2c9fc8b48a0164f3db9a8a31a
-    assemblyName: Unity.Services.PushNotifications
-    namespaceName: Unity.Services.PushNotifications
-    className: PushNotificationsContainer
-  - hash:
-      serializedVersion: 2
-      Hash: 0d747ec795ab2152db7f0cf9c5cef80b
-    assemblyName: Unity.Services.Analytics
-    namespaceName: Unity.Services.Analytics
-    className: AnalyticsContainer
   platform: 9
   scenePathNames:
   - Assets/Scenes/Cobra_Demo_2.unity

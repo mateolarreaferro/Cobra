@@ -228,14 +228,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.AI.NavMeshAgent
 
-	//Start Registrations for type : UnityEngine.Analytics.AnalyticsCommon
-
-		//System.Void UnityEngine.Analytics.AnalyticsCommon::set_ugsAnalyticsEnabledInternal(System.Boolean)
-		void Register_UnityEngine_Analytics_AnalyticsCommon_set_ugsAnalyticsEnabledInternal();
-		Register_UnityEngine_Analytics_AnalyticsCommon_set_ugsAnalyticsEnabledInternal();
-
-	//End Registrations for type : UnityEngine.Analytics.AnalyticsCommon
-
 	//Start Registrations for type : UnityEngine.AnimationClip
 
 		//System.Boolean UnityEngine.AnimationClip::get_empty()
@@ -522,30 +514,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_get_targetFrameRate();
 		Register_UnityEngine_Application_get_targetFrameRate();
 
-		//System.String UnityEngine.Application::get_buildGUID()
-		void Register_UnityEngine_Application_get_buildGUID();
-		Register_UnityEngine_Application_get_buildGUID();
-
-		//System.String UnityEngine.Application::get_cloudProjectId()
-		void Register_UnityEngine_Application_get_cloudProjectId();
-		Register_UnityEngine_Application_get_cloudProjectId();
-
-		//System.String UnityEngine.Application::get_identifier()
-		void Register_UnityEngine_Application_get_identifier();
-		Register_UnityEngine_Application_get_identifier();
-
-		//System.String UnityEngine.Application::get_persistentDataPath()
-		void Register_UnityEngine_Application_get_persistentDataPath();
-		Register_UnityEngine_Application_get_persistentDataPath();
-
-		//System.String UnityEngine.Application::get_streamingAssetsPath()
-		void Register_UnityEngine_Application_get_streamingAssetsPath();
-		Register_UnityEngine_Application_get_streamingAssetsPath();
-
-		//System.String UnityEngine.Application::get_version()
-		void Register_UnityEngine_Application_get_version();
-		Register_UnityEngine_Application_get_version();
-
 		//System.Void UnityEngine.Application::OpenURL(System.String)
 		void Register_UnityEngine_Application_OpenURL();
 		Register_UnityEngine_Application_OpenURL();
@@ -559,18 +527,6 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Application_get_platform();
 
 	//End Registrations for type : UnityEngine.Application
-
-	//Start Registrations for type : UnityEngine.AsyncOperation
-
-		//System.Boolean UnityEngine.AsyncOperation::get_isDone()
-		void Register_UnityEngine_AsyncOperation_get_isDone();
-		Register_UnityEngine_AsyncOperation_get_isDone();
-
-		//System.Void UnityEngine.AsyncOperation::InternalDestroy(System.IntPtr)
-		void Register_UnityEngine_AsyncOperation_InternalDestroy();
-		Register_UnityEngine_AsyncOperation_InternalDestroy();
-
-	//End Registrations for type : UnityEngine.AsyncOperation
 
 	//Start Registrations for type : UnityEngine.Audio.AudioMixer
 
@@ -2632,18 +2588,6 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.LineRenderer
 
-	//Start Registrations for type : UnityEngine.LowLevel.PlayerLoop
-
-		//System.Void UnityEngine.LowLevel.PlayerLoop::SetPlayerLoopInternal(UnityEngine.LowLevel.PlayerLoopSystemInternal[])
-		void Register_UnityEngine_LowLevel_PlayerLoop_SetPlayerLoopInternal();
-		Register_UnityEngine_LowLevel_PlayerLoop_SetPlayerLoopInternal();
-
-		//UnityEngine.LowLevel.PlayerLoopSystemInternal[] UnityEngine.LowLevel.PlayerLoop::GetCurrentPlayerLoopInternal()
-		void Register_UnityEngine_LowLevel_PlayerLoop_GetCurrentPlayerLoopInternal();
-		Register_UnityEngine_LowLevel_PlayerLoop_GetCurrentPlayerLoopInternal();
-
-	//End Registrations for type : UnityEngine.LowLevel.PlayerLoop
-
 	//Start Registrations for type : UnityEngine.Material
 
 		//System.Boolean UnityEngine.Material::HasProperty(System.Int32)
@@ -3095,98 +3039,6 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Motion_get_isLooping();
 
 	//End Registrations for type : UnityEngine.Motion
-
-	//Start Registrations for type : UnityEngine.Networking.CertificateHandler
-
-		//System.Void UnityEngine.Networking.CertificateHandler::Release()
-		void Register_UnityEngine_Networking_CertificateHandler_Release();
-		Register_UnityEngine_Networking_CertificateHandler_Release();
-
-	//End Registrations for type : UnityEngine.Networking.CertificateHandler
-
-	//Start Registrations for type : UnityEngine.Networking.DownloadHandler
-
-		//System.Void UnityEngine.Networking.DownloadHandler::Release()
-		void Register_UnityEngine_Networking_DownloadHandler_Release();
-		Register_UnityEngine_Networking_DownloadHandler_Release();
-
-	//End Registrations for type : UnityEngine.Networking.DownloadHandler
-
-	//Start Registrations for type : UnityEngine.Networking.UnityWebRequest
-
-		//System.Boolean UnityEngine.Networking.UnityWebRequest::get_isModifiable()
-		void Register_UnityEngine_Networking_UnityWebRequest_get_isModifiable();
-		Register_UnityEngine_Networking_UnityWebRequest_get_isModifiable();
-
-		//System.Int64 UnityEngine.Networking.UnityWebRequest::get_responseCode()
-		void Register_UnityEngine_Networking_UnityWebRequest_get_responseCode();
-		Register_UnityEngine_Networking_UnityWebRequest_get_responseCode();
-
-		//System.IntPtr UnityEngine.Networking.UnityWebRequest::Create()
-		void Register_UnityEngine_Networking_UnityWebRequest_Create();
-		Register_UnityEngine_Networking_UnityWebRequest_Create();
-
-		//System.String UnityEngine.Networking.UnityWebRequest::GetWebErrorString(UnityEngine.Networking.UnityWebRequest/UnityWebRequestError)
-		void Register_UnityEngine_Networking_UnityWebRequest_GetWebErrorString();
-		Register_UnityEngine_Networking_UnityWebRequest_GetWebErrorString();
-
-		//System.Void UnityEngine.Networking.UnityWebRequest::Abort()
-		void Register_UnityEngine_Networking_UnityWebRequest_Abort();
-		Register_UnityEngine_Networking_UnityWebRequest_Abort();
-
-		//System.Void UnityEngine.Networking.UnityWebRequest::Release()
-		void Register_UnityEngine_Networking_UnityWebRequest_Release();
-		Register_UnityEngine_Networking_UnityWebRequest_Release();
-
-		//UnityEngine.Networking.UnityWebRequest/Result UnityEngine.Networking.UnityWebRequest::get_result()
-		void Register_UnityEngine_Networking_UnityWebRequest_get_result();
-		Register_UnityEngine_Networking_UnityWebRequest_get_result();
-
-		//UnityEngine.Networking.UnityWebRequest/UnityWebRequestError UnityEngine.Networking.UnityWebRequest::InternalSetRequestHeader(System.String,System.String)
-		void Register_UnityEngine_Networking_UnityWebRequest_InternalSetRequestHeader();
-		Register_UnityEngine_Networking_UnityWebRequest_InternalSetRequestHeader();
-
-		//UnityEngine.Networking.UnityWebRequest/UnityWebRequestError UnityEngine.Networking.UnityWebRequest::SetCustomMethod(System.String)
-		void Register_UnityEngine_Networking_UnityWebRequest_SetCustomMethod();
-		Register_UnityEngine_Networking_UnityWebRequest_SetCustomMethod();
-
-		//UnityEngine.Networking.UnityWebRequest/UnityWebRequestError UnityEngine.Networking.UnityWebRequest::SetMethod(UnityEngine.Networking.UnityWebRequest/UnityWebRequestMethod)
-		void Register_UnityEngine_Networking_UnityWebRequest_SetMethod();
-		Register_UnityEngine_Networking_UnityWebRequest_SetMethod();
-
-		//UnityEngine.Networking.UnityWebRequest/UnityWebRequestError UnityEngine.Networking.UnityWebRequest::SetUploadHandler(UnityEngine.Networking.UploadHandler)
-		void Register_UnityEngine_Networking_UnityWebRequest_SetUploadHandler();
-		Register_UnityEngine_Networking_UnityWebRequest_SetUploadHandler();
-
-		//UnityEngine.Networking.UnityWebRequest/UnityWebRequestError UnityEngine.Networking.UnityWebRequest::SetUrl(System.String)
-		void Register_UnityEngine_Networking_UnityWebRequest_SetUrl();
-		Register_UnityEngine_Networking_UnityWebRequest_SetUrl();
-
-		//UnityEngine.Networking.UnityWebRequestAsyncOperation UnityEngine.Networking.UnityWebRequest::BeginWebRequest()
-		void Register_UnityEngine_Networking_UnityWebRequest_BeginWebRequest();
-		Register_UnityEngine_Networking_UnityWebRequest_BeginWebRequest();
-
-	//End Registrations for type : UnityEngine.Networking.UnityWebRequest
-
-	//Start Registrations for type : UnityEngine.Networking.UploadHandler
-
-		//System.Void UnityEngine.Networking.UploadHandler::InternalSetContentType(System.String)
-		void Register_UnityEngine_Networking_UploadHandler_InternalSetContentType();
-		Register_UnityEngine_Networking_UploadHandler_InternalSetContentType();
-
-		//System.Void UnityEngine.Networking.UploadHandler::Release()
-		void Register_UnityEngine_Networking_UploadHandler_Release();
-		Register_UnityEngine_Networking_UploadHandler_Release();
-
-	//End Registrations for type : UnityEngine.Networking.UploadHandler
-
-	//Start Registrations for type : UnityEngine.Networking.UploadHandlerRaw
-
-		//System.IntPtr UnityEngine.Networking.UploadHandlerRaw::Create(UnityEngine.Networking.UploadHandlerRaw,System.Byte*,System.Int32)
-		void Register_UnityEngine_Networking_UploadHandlerRaw_Create();
-		Register_UnityEngine_Networking_UploadHandlerRaw_Create();
-
-	//End Registrations for type : UnityEngine.Networking.UploadHandlerRaw
 
 	//Start Registrations for type : UnityEngine.NoAllocHelpers
 
@@ -4998,21 +4850,9 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_SystemInfo_MaxGraphicsBufferSize();
 		Register_UnityEngine_SystemInfo_MaxGraphicsBufferSize();
 
-		//System.Single UnityEngine.SystemInfo::GetBatteryLevel()
-		void Register_UnityEngine_SystemInfo_GetBatteryLevel();
-		Register_UnityEngine_SystemInfo_GetBatteryLevel();
-
-		//System.String UnityEngine.SystemInfo::GetDeviceUniqueIdentifier()
-		void Register_UnityEngine_SystemInfo_GetDeviceUniqueIdentifier();
-		Register_UnityEngine_SystemInfo_GetDeviceUniqueIdentifier();
-
 		//System.String UnityEngine.SystemInfo::GetProcessorType()
 		void Register_UnityEngine_SystemInfo_GetProcessorType();
 		Register_UnityEngine_SystemInfo_GetProcessorType();
-
-		//UnityEngine.DeviceType UnityEngine.SystemInfo::GetDeviceType()
-		void Register_UnityEngine_SystemInfo_GetDeviceType();
-		Register_UnityEngine_SystemInfo_GetDeviceType();
 
 		//UnityEngine.Experimental.Rendering.GraphicsFormat UnityEngine.SystemInfo::GetCompatibleFormat(UnityEngine.Experimental.Rendering.GraphicsFormat,UnityEngine.Experimental.Rendering.FormatUsage)
 		void Register_UnityEngine_SystemInfo_GetCompatibleFormat();

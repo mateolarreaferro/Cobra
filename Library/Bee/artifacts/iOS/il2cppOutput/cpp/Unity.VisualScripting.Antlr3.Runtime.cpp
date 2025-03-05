@@ -6243,7 +6243,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseRecognizer_EmitErrorMessage_m26A76F8
 		L_0 = Console_get_Error_m0132A8360914E80AD6EEF7A353BC1C75A29AE4BF_inline(NULL);
 		String_t* L_1 = ___0_msg;
 		NullCheck(L_0);
-		VirtualActionInvoker1< String_t* >::Invoke(19, L_0, L_1);
+		VirtualActionInvoker1< String_t* >::Invoke(17, L_0, L_1);
 		return;
 	}
 }

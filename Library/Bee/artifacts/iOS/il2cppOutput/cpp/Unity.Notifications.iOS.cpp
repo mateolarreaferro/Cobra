@@ -1356,6 +1356,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_RegisterOnReceiv
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool iOSNotificationCenter_Initialize_m3ABD98E821A5025EDC2B8D97F5851194A336DA5F (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 iOSNotification_GetDataForSending_m389ADA195D034D80F017CE145C149AFD66996B69 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper_ScheduleLocalNotification_m2C66F2E8B8E6A438424896D297650C6AF4228361 (iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_data, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__RemoveScheduledNotification_m3D085E61FFCE3BBBBEE2C455F0D4757BD9FD4F6F (String_t* ___0_identifier, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationsWrapper__RemoveDeliveredNotification_m08D8941EED5B8205A4271B3DC67D67D3E8C2AD53 (String_t* ___0_identifier, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotification__ctor_m480637048FB144A8C2E4014549FFEE9D4299F6E8 (iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* __this, iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 ___0_data, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NotificationReceivedCallback_Invoke_m3B1BDE2C1BB4A179891B70D1E0B3D22CCD1F1B36_inline (NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, iOSNotification_t9191FC8C8CEEDE5C6B16D90A1CA0B85293C3B327* ___0_notification, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationReceivedCallback__ctor_mF2B904C1330647023D5E7ECE08EDA8266BE8F55E (NotificationReceivedCallback_t4F2B50B8353419C0464767673653A46F08E4F0A1* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
@@ -1520,6 +1522,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double TimeSpan_get_TotalSeconds_mED686E7CECE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationTimeIntervalTrigger_set_TimeInterval_m8DDE94D778C187DAC0F82E324AF795E64E005130 (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationTimeIntervalTrigger_set_Repeats_m7A9109F22E610DF25D696DD1CDEED9B311FBE5B9_inline (iOSNotificationTimeIntervalTrigger_t593870D7C4B3A93D9395C1A58DC4F98B445B2649* __this, bool ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t iOSNotificationCalendarTrigger_get_Type_mB3B8E3E49566CDA04FD16B12BDDD8F53CDEB0EBA (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Year_m4990382171B1A2F2BA9E8EF70EE3BA3780A7C580_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Month_m6A0717CC00C5710782F55B6E8F235A8CCA783FCC_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Day_m8FB648F44C32FF032448CA475F56AF12FC7E760B_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Hour_m3322D5351F9E8EFC284E552E55BF145355F8CF60_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Minute_mF59941F1A7D0B027AACDAB8445DAC99DAE9AEE82_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Second_m2347F668195B9C4773D4B0B3B297221FF8561F7D_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) ;
@@ -3313,6 +3318,60 @@ IL_0008:
 		iOSNotificationWithUserInfo_tEBF7E61C8AC189D82F3EE4C40FF137812F6399E5 L_2;
 		L_2 = iOSNotification_GetDataForSending_m389ADA195D034D80F017CE145C149AFD66996B69(L_1, NULL);
 		iOSNotificationsWrapper_ScheduleLocalNotification_m2C66F2E8B8E6A438424896D297650C6AF4228361(L_2, NULL);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCenter_RemoveScheduledNotification_m6E4905A8B1F0A8EC617B07B656D2615AE4AF990B (String_t* ___0_identifier, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = iOSNotificationCenter_Initialize_m3ABD98E821A5025EDC2B8D97F5851194A336DA5F(NULL);
+		if (!L_0)
+		{
+			goto IL_000d;
+		}
+	}
+	{
+		String_t* L_1 = ___0_identifier;
+		iOSNotificationsWrapper__RemoveScheduledNotification_m3D085E61FFCE3BBBBEE2C455F0D4757BD9FD4F6F(L_1, NULL);
+	}
+
+IL_000d:
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCenter_RemoveDeliveredNotification_m161648F9386D35C17747738FDA8CF7F82FF3E0A1 (String_t* ___0_identifier, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(iOSNotificationCenter_t74DF080370FA0C88E42962A44D1F9EC025B84E53_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = iOSNotificationCenter_Initialize_m3ABD98E821A5025EDC2B8D97F5851194A336DA5F(NULL);
+		if (!L_0)
+		{
+			goto IL_000d;
+		}
+	}
+	{
+		String_t* L_1 = ___0_identifier;
+		iOSNotificationsWrapper__RemoveDeliveredNotification_m08D8941EED5B8205A4271B3DC67D67D3E8C2AD53(L_1, NULL);
+	}
+
+IL_000d:
+	{
 		return;
 	}
 }
@@ -6169,6 +6228,21 @@ IL2CPP_EXTERN_C  Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotific
 	_returnValue = iOSNotificationCalendarTrigger_get_Year_m374E19995A7D455F538AD624B45038314F67A552_inline(_thisAdjusted, method);
 	return _returnValue;
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Year_m4990382171B1A2F2BA9E8EF70EE3BA3780A7C580 (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CYearU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationCalendarTrigger_set_Year_m4990382171B1A2F2BA9E8EF70EE3BA3780A7C580_AdjustorThunk (RuntimeObject* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	iOSNotificationCalendarTrigger_set_Year_m4990382171B1A2F2BA9E8EF70EE3BA3780A7C580_inline(_thisAdjusted, ___0_value, method);
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Month_mDB1FF22A26190D324FA2E318A568DADD8052B880 (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6185,6 +6259,21 @@ IL2CPP_EXTERN_C  Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotific
 	_returnValue = iOSNotificationCalendarTrigger_get_Month_mDB1FF22A26190D324FA2E318A568DADD8052B880_inline(_thisAdjusted, method);
 	return _returnValue;
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Month_m6A0717CC00C5710782F55B6E8F235A8CCA783FCC (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CMonthU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationCalendarTrigger_set_Month_m6A0717CC00C5710782F55B6E8F235A8CCA783FCC_AdjustorThunk (RuntimeObject* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	iOSNotificationCalendarTrigger_set_Month_m6A0717CC00C5710782F55B6E8F235A8CCA783FCC_inline(_thisAdjusted, ___0_value, method);
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Day_mC4F7971F8793F44ABC30D0EF92ACB3E48764E0AB (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6200,6 +6289,21 @@ IL2CPP_EXTERN_C  Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotific
 	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 _returnValue;
 	_returnValue = iOSNotificationCalendarTrigger_get_Day_mC4F7971F8793F44ABC30D0EF92ACB3E48764E0AB_inline(_thisAdjusted, method);
 	return _returnValue;
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Day_m8FB648F44C32FF032448CA475F56AF12FC7E760B (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CDayU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void iOSNotificationCalendarTrigger_set_Day_m8FB648F44C32FF032448CA475F56AF12FC7E760B_AdjustorThunk (RuntimeObject* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method)
+{
+	iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C*>(__this + _offset);
+	iOSNotificationCalendarTrigger_set_Day_m8FB648F44C32FF032448CA475F56AF12FC7E760B_inline(_thisAdjusted, ___0_value, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 iOSNotificationCalendarTrigger_get_Hour_mCD81C83676F017602B51D1F20874004DCA39FF6F (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, const RuntimeMethod* method) 
 {
@@ -6597,6 +6701,30 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationTimeIntervalT
 	{
 		bool L_0 = ___0_value;
 		__this->___U3CRepeatsU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Year_m4990382171B1A2F2BA9E8EF70EE3BA3780A7C580_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CYearU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Month_m6A0717CC00C5710782F55B6E8F235A8CCA783FCC_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CMonthU3Ek__BackingField = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void iOSNotificationCalendarTrigger_set_Day_m8FB648F44C32FF032448CA475F56AF12FC7E760B_inline (iOSNotificationCalendarTrigger_tFBBE4331865F1CDB941E7B2B636906E5642C283C* __this, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_0 = ___0_value;
+		__this->___U3CDayU3Ek__BackingField = L_0;
 		return;
 	}
 }

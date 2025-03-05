@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638767682850000000
-    m_Hash: 3358852625
+      ticks: 638767693780000000
+    m_Hash: 4174191588
   m_LockFileStatus:
     m_FilePath: /Users/mateolarreaferro/Desktop/Cobra/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638767682850000000
-    m_Hash: 1107091043
+      ticks: 638767693790000000
+    m_Hash: 2137756511
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -690,109 +690,6 @@ m_ResolvedPackages:
     version: 1.2.5
     nextVersion: 
     recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  fingerprint: 
-- packageId: com.unity.services.push-notifications@4.0.1
-  testable: 0
-  isDirectDependency: 1
-  version: 4.0.1
-  source: 1
-  resolvedPath: /Users/mateolarreaferro/Desktop/Cobra/Library/PackageCache/com.unity.services.push-notifications@4.0.1
-  assetPath: Packages/com.unity.services.push-notifications
-  name: com.unity.services.push-notifications
-  displayName: Push Notifications
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: This package adds support for Push Notifications to your game. It
-    allows sending rich push notifications with images, and provides analytics on
-    the number of received push notifications.
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 1.0.0-pre.3
-    - 1.0.0-pre.4
-    - 1.1.0-pre.1
-    - 1.1.0-pre.2
-    - 2.0.0-pre.1
-    - 2.0.0-pre.2
-    - 3.0.0-pre.1
-    - 3.0.1-pre.1
-    - 4.0.0-pre.1
-    - 4.0.0
-    - 4.0.1
-    compatible:
-    - 1.0.0-pre.3
-    - 1.0.0-pre.4
-    - 1.1.0-pre.1
-    - 1.1.0-pre.2
-    - 2.0.0-pre.1
-    - 2.0.0-pre.2
-    - 3.0.0-pre.1
-    - 3.0.1-pre.1
-    - 4.0.0-pre.1
-    - 4.0.0
-    - 4.0.1
-    recommended: 4.0.1
-    deprecated: []
-  dependencies:
-  - name: com.unity.services.core
-    version: 1.10.1
-  - name: com.unity.services.analytics
-    version: 6.0.1
-  - name: com.unity.mobile.notifications
-    version: 2.2.0
-  resolvedDependencies:
-  - name: com.unity.services.core
-    version: 1.12.5
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
-  - name: com.unity.nuget.newtonsoft-json
-    version: 3.2.1
-  - name: com.unity.modules.androidjni
-    version: 1.0.0
-  - name: com.unity.services.analytics
-    version: 6.0.1
-  - name: com.unity.ugui
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  - name: com.unity.mobile.notifications
-    version: 2.3.2
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638682326563600000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.push-notifications@4.0/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-    revision: 7d105ba1603a3370df040d31623257840cb44525
-    path: 
-  unityLifecycle:
-    version: 
-    nextVersion: 
-    recommendedVersion: 4.0.0
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
@@ -3993,322 +3890,6 @@ m_ResolvedPackages:
   isDeprecated: 0
   deprecationMessage: 
   fingerprint: 
-- packageId: com.unity.services.core@1.12.5
-  testable: 0
-  isDirectDependency: 0
-  version: 1.12.5
-  source: 1
-  resolvedPath: /Users/mateolarreaferro/Desktop/Cobra/Library/PackageCache/com.unity.services.core@1.12.5
-  assetPath: Packages/com.unity.services.core
-  name: com.unity.services.core
-  displayName: Services Core
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: 'This package defines common components used by multiple Game Service
-    packages.
-
-    These are standardized and aim to unify the overall experience
-    of working with Game Services SDK.'
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 1.0.1
-    - 1.1.0-pre.7
-    - 1.1.0-pre.8
-    - 1.1.0-pre.9
-    - 1.1.0-pre.10
-    - 1.1.0-pre.11
-    - 1.1.0-pre.41
-    - 1.1.0-pre.69
-    - 1.2.0
-    - 1.3.1
-    - 1.3.2
-    - 1.4.0
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
-    - 1.5.2
-    - 1.6.0
-    - 1.7.0
-    - 1.7.1
-    - 1.12.5
-    compatible:
-    - 1.12.5
-    recommended: 
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
-  - name: com.unity.nuget.newtonsoft-json
-    version: 3.2.1
-  - name: com.unity.modules.androidjni
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
-  - name: com.unity.nuget.newtonsoft-json
-    version: 3.2.1
-  - name: com.unity.modules.androidjni
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.core@1.12/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-    revision: 85f4cc67cb1ec043a92990cbe34002037e9948e4
-    path: 
-  unityLifecycle:
-    version: 1.12.5
-    nextVersion: 
-    recommendedVersion: 1.14.0
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  fingerprint: 
-- packageId: com.unity.services.analytics@6.0.1
-  testable: 0
-  isDirectDependency: 0
-  version: 6.0.1
-  source: 1
-  resolvedPath: /Users/mateolarreaferro/Desktop/Cobra/Library/PackageCache/com.unity.services.analytics@6.0.1
-  assetPath: Packages/com.unity.services.analytics
-  name: com.unity.services.analytics
-  displayName: Analytics
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: The Unity Analytics package automatically collects core events and
-    user properties when someone uses your game or application, and enables you to
-    track specific in-game actions your user performs by defining custom events.
-    The data collected from this package is surfaced in the Unity dashboard where
-    you can use it to gather user insights, segment your player base and make informed
-    decisions around the optimization of your game.
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 1.0.3
-    - 1.0.4
-    - 1.0.5
-    - 2.0.7-pre.4
-    - 2.0.7-pre.6
-    - 2.0.7-pre.7
-    - 3.0.0-pre.2
-    - 3.0.0-pre.3
-    - 3.0.0-pre.4
-    - 4.0.0-pre.2
-    - 4.0.0-pre.3
-    - 4.0.0
-    - 4.0.1
-    - 4.1.0
-    - 4.2.0
-    - 4.3.0
-    - 4.4.0
-    - 4.4.1
-    - 4.4.2
-    - 5.0.0
-    - 5.0.1
-    - 5.0.2
-    - 5.1.0
-    - 5.1.1
-    - 6.0.1
-    - 6.0.2
-    compatible:
-    - 5.0.0
-    - 5.0.1
-    - 5.0.2
-    - 5.1.0
-    - 5.1.1
-    - 6.0.1
-    - 6.0.2
-    recommended: 6.0.2
-    deprecated: []
-  dependencies:
-  - name: com.unity.ugui
-    version: 1.0.0
-  - name: com.unity.services.core
-    version: 1.12.4
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.ugui
-    version: 1.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
-  - name: com.unity.services.core
-    version: 1.12.5
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
-  - name: com.unity.nuget.newtonsoft-json
-    version: 3.2.1
-  - name: com.unity.modules.androidjni
-    version: 1.0.0
-  - name: com.unity.modules.jsonserialize
-    version: 1.0.0
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638587935530000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.analytics@6.0/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-    revision: e54e6e452cff2d0d31e9b5530b2dbd8ffcf2f0e7
-    path: 
-  unityLifecycle:
-    version: 5.0.0
-    nextVersion: 
-    recommendedVersion: 6.0.1
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  fingerprint: 
-- packageId: com.unity.mobile.notifications@2.3.2
-  testable: 0
-  isDirectDependency: 0
-  version: 2.3.2
-  source: 1
-  resolvedPath: /Users/mateolarreaferro/Desktop/Cobra/Library/PackageCache/com.unity.mobile.notifications@2.3.2
-  assetPath: Packages/com.unity.mobile.notifications
-  name: com.unity.mobile.notifications
-  displayName: Mobile Notifications
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: assets
-  description: 'Mobile Notifications package adds support for scheduling local repeatable
-    or one-time notifications on iOS and Android.
-
-
-    On iOS receiving of push
-    notifications is also supported.'
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 1.0.0-preview.4
-    - 1.0.0-preview.5
-    - 1.0.0-preview.7
-    - 1.0.0-preview.8
-    - 1.0.0-preview.9
-    - 1.0.0-preview.10
-    - 1.0.0-preview.13
-    - 1.0.0-preview.17
-    - 1.0.0-preview.21
-    - 1.0.0-preview.23
-    - 1.0.2
-    - 1.0.3-preview
-    - 1.0.3-preview.3
-    - 1.0.3-preview.4
-    - 1.0.3-preview.5
-    - 1.0.3-preview.6
-    - 1.0.3
-    - 1.0.4-preview.1
-    - 1.0.4-preview.2
-    - 1.0.4-preview.3
-    - 1.0.4-preview.4
-    - 1.0.4-preview.5
-    - 1.0.4-preview.6
-    - 1.0.4-preview.9
-    - 1.1.0-preview
-    - 1.2.0-preview
-    - 1.2.1-preview
-    - 1.3.0
-    - 1.3.2
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
-    - 1.4.4
-    - 2.0.0
-    - 2.0.1
-    - 2.0.2
-    - 2.1.0
-    - 2.1.1
-    - 2.2.0
-    - 2.2.1
-    - 2.2.2
-    - 2.3.0
-    - 2.3.1
-    - 2.3.2
-    - 2.4.0
-    compatible:
-    - 2.3.2
-    - 2.4.0
-    recommended: 2.3.2
-    deprecated: []
-  dependencies:
-  - name: com.unity.modules.androidjni
-    version: 1.0.0
-  resolvedDependencies:
-  - name: com.unity.modules.androidjni
-    version: 1.0.0
-  keywords:
-  - Android
-  - iOS
-  - Notifications
-  - Mobile
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638439365880000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.mobile.notifications@2.3/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.com/Unity-Technologies/com.unity.mobile.notifications.git
-    revision: 7de9a5c26d6061554361b31f91ec74e61e14a172
-    path: 
-  unityLifecycle:
-    version: 2.3.2
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  fingerprint: 
 - packageId: com.unity.mobile.android-logcat@1.4.3
   testable: 0
   isDirectDependency: 0
@@ -4537,6 +4118,119 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 4.0.1
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  fingerprint: 
+- packageId: com.unity.mobile.notifications@2.3.2
+  testable: 0
+  isDirectDependency: 0
+  version: 2.3.2
+  source: 1
+  resolvedPath: /Users/mateolarreaferro/Desktop/Cobra/Library/PackageCache/com.unity.mobile.notifications@2.3.2
+  assetPath: Packages/com.unity.mobile.notifications
+  name: com.unity.mobile.notifications
+  displayName: Mobile Notifications
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: 'Mobile Notifications package adds support for scheduling local repeatable
+    or one-time notifications on iOS and Android.
+
+
+    On iOS receiving of push
+    notifications is also supported.'
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.0-preview.4
+    - 1.0.0-preview.5
+    - 1.0.0-preview.7
+    - 1.0.0-preview.8
+    - 1.0.0-preview.9
+    - 1.0.0-preview.10
+    - 1.0.0-preview.13
+    - 1.0.0-preview.17
+    - 1.0.0-preview.21
+    - 1.0.0-preview.23
+    - 1.0.2
+    - 1.0.3-preview
+    - 1.0.3-preview.3
+    - 1.0.3-preview.4
+    - 1.0.3-preview.5
+    - 1.0.3-preview.6
+    - 1.0.3
+    - 1.0.4-preview.1
+    - 1.0.4-preview.2
+    - 1.0.4-preview.3
+    - 1.0.4-preview.4
+    - 1.0.4-preview.5
+    - 1.0.4-preview.6
+    - 1.0.4-preview.9
+    - 1.1.0-preview
+    - 1.2.0-preview
+    - 1.2.1-preview
+    - 1.3.0
+    - 1.3.2
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    - 2.1.0
+    - 2.1.1
+    - 2.2.0
+    - 2.2.1
+    - 2.2.2
+    - 2.3.0
+    - 2.3.1
+    - 2.3.2
+    - 2.4.0
+    compatible:
+    - 2.3.2
+    - 2.4.0
+    recommended: 2.3.2
+    deprecated: []
+  dependencies:
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  keywords:
+  - Android
+  - iOS
+  - Notifications
+  - Mobile
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638439365880000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.mobile.notifications@2.3/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.mobile.notifications.git
+    revision: 7de9a5c26d6061554361b31f91ec74e61e14a172
+    path: 
+  unityLifecycle:
+    version: 2.3.2
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -5641,83 +5335,6 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 4.9.2
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  fingerprint: 
-- packageId: com.unity.nuget.newtonsoft-json@3.2.1
-  testable: 0
-  isDirectDependency: 0
-  version: 3.2.1
-  source: 1
-  resolvedPath: /Users/mateolarreaferro/Desktop/Cobra/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1
-  assetPath: Packages/com.unity.nuget.newtonsoft-json
-  name: com.unity.nuget.newtonsoft-json
-  displayName: Newtonsoft Json
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: library
-  description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
-    synced to version 13.0.2.
-
-
-    This package is used for advanced json serialization
-    and deserialization. Most Unity users will be better suited using the existing
-    json tools built into Unity.
-
-    To avoid assembly clashes, please use this
-    package if you intend to use Newtonsoft Json.'
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 1.0.0-preview.2
-    - 1.0.0-preview.3
-    - 1.0.0-preview.4
-    - 1.0.1-preview.1
-    - 1.1.2
-    - 2.0.0-preview
-    - 2.0.0-preview.1
-    - 2.0.0-preview.2
-    - 2.0.0
-    - 2.0.1-preview.1
-    - 2.0.2
-    - 3.0.1
-    - 3.0.2
-    - 3.2.1
-    compatible:
-    - 3.2.1
-    recommended: 3.2.1
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 0
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
-    revision: d8e49aef8979bef617144382052ec2f479645eaf
-    path: 
-  unityLifecycle:
-    version: 3.2.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
