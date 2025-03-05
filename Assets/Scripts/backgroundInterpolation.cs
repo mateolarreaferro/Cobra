@@ -7,19 +7,31 @@ public class BackgroundInterpolation : MonoBehaviour
     [SerializeField] private Camera _camera; // Reference to the Camera
     [SerializeField] [Range(0f, 0.4f)] private float interpolationSpeed = 0.25f; // Speed of color transition
 
-    // Predefined meditation app colors (Hex values converted to Color)
+    // Pastel versions of the new brand colors
     private Color[] colors = new Color[]
     {
-        new Color(0.769f, 0.718f, 0.831f), // #C4B7D4 - Muted Lavender
-        new Color(0.843f, 0.910f, 0.831f), // #D7E8D4 - Pale Mint
-        new Color(0.949f, 0.910f, 0.812f), // #F2E8CF - Light Sand
-        new Color(0.655f, 0.776f, 0.855f), // #A7C6DA - Muted Blue
-        new Color(0.490f, 0.490f, 0.490f)  // #7D7D7D - Warm Gray
+        // #F5F5F5
+        new Color(0.96f, 0.96f, 0.96f),
+
+        // #D0FAFA (pastel version of #00F5F5)
+        new Color(0.82f, 0.98f, 0.98f),
+
+        // #FFD1E6 (pastel version of #fe47b3)
+        new Color(1.00f, 0.82f, 0.90f),
+
+        // #E0FBD1 (pastel version of #a6e866)
+        new Color(0.88f, 0.98f, 0.82f),
+
+        // #FFE6CC (pastel version of #ff9a26)
+        new Color(1.00f, 0.90f, 0.80f),
+
+        // #ECD1F5 (pastel version of #d57be9)
+        new Color(0.93f, 0.82f, 0.96f)
     };
 
     private int currentColorIndex = 0; // Index of the current color in the array
-    private int nextColorIndex = 1; // Index of the next color in the array
-    private float t = 0.75f; // Time variable for interpolation
+    private int nextColorIndex = 1;    // Index of the next color in the array
+    private float t = 0.75f;          // Time variable for interpolation
 
     void Start()
     {

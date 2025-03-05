@@ -4047,6 +4047,7 @@ GameObject:
   - component: {fileID: 1388793077}
   - component: {fileID: 1388793076}
   - component: {fileID: 1388793078}
+  - component: {fileID: 1388793079}
   m_Layer: 0
   m_Name: Background Anim
   m_TagString: Untagged
@@ -4190,6 +4191,20 @@ AudioLowPassFilter:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1388793079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388793075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44e07f59cac54b0db06fb04e9da288f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 519420031}
+  interpolationSpeed: 0.25
 --- !u!1 &1393177527
 GameObject:
   m_ObjectHideFlags: 0
@@ -4247,7 +4262,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 9e3ff9b764555c54998d2a96488e1ece, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
