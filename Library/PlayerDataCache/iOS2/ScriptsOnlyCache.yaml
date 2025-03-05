@@ -6,10 +6,11 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - ActivityLogic
     - AudioPlayer
-    - BackgroundCircleAnim
     - BackgroundInterpolation
+    - BreathingAnimation
     - GrowAndShrink
     - RectTransformScaler
+    - Selected
     - Wheel
     - debugButtons
     DOTween.dll:
@@ -254,14 +255,41 @@ ScriptsOnlyBuild:
     fullTypeName: ActivityLogic
     methodName: SetWalking
   - assembly: Assembly-CSharp
+    fullTypeName: RectTransformScaler
+    methodName: Shrink
+  - assembly: Assembly-CSharp
+    fullTypeName: RectTransformScaler
+    methodName: Grow
+  - assembly: Assembly-CSharp
+    fullTypeName: AudioPlayer
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: ActivityLogic
+    methodName: CompleteCard
+  - assembly: Assembly-CSharp
+    fullTypeName: AudioPlayer
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: RectTransformScaler
+    methodName: Grow
+  - assembly: Assembly-CSharp
+    fullTypeName: RectTransformScaler
+    methodName: Shrink
+  - assembly: Assembly-CSharp
+    fullTypeName: AudioPlayer
+    methodName: Play
+  - assembly: Assembly-CSharp
+    fullTypeName: ActivityLogic
+    methodName: DiscardCard
+  - assembly: Assembly-CSharp
+    fullTypeName: AudioPlayer
+    methodName: Play
+  - assembly: Assembly-CSharp
     fullTypeName: AudioPlayer
     methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: AudioPlayer
     methodName: Play
-  - assembly: Assembly-CSharp
-    fullTypeName: GrowAndShrink
-    methodName: ShrinkAndDisable
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -305,7 +333,7 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: ResetDebugManager
   sceneClasses:
-    Assets/Scenes/Cobra.unity:
+    Assets/Scenes/Cobra_Demo_2.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -314,21 +342,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
     - Class: 58
-      Script: {instanceID: 0}
-    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -357,126 +377,134 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17292}
     - Class: 114
-      Script: {instanceID: 17518}
+      Script: {instanceID: 17346}
     - Class: 114
-      Script: {instanceID: 17894}
+      Script: {instanceID: 17520}
     - Class: 114
-      Script: {instanceID: 18388}
+      Script: {instanceID: 17896}
     - Class: 114
-      Script: {instanceID: 18466}
+      Script: {instanceID: 18390}
     - Class: 114
-      Script: {instanceID: 18564}
+      Script: {instanceID: 18468}
     - Class: 114
-      Script: {instanceID: 18616}
+      Script: {instanceID: 18566}
     - Class: 114
-      Script: {instanceID: 19204}
+      Script: {instanceID: 18618}
     - Class: 114
-      Script: {instanceID: 19210}
+      Script: {instanceID: 19206}
     - Class: 114
-      Script: {instanceID: 19632}
+      Script: {instanceID: 19212}
     - Class: 114
-      Script: {instanceID: 19850}
+      Script: {instanceID: 19634}
     - Class: 114
-      Script: {instanceID: 20008}
+      Script: {instanceID: 19852}
     - Class: 114
-      Script: {instanceID: 20054}
+      Script: {instanceID: 20010}
     - Class: 114
-      Script: {instanceID: 20116}
+      Script: {instanceID: 20056}
     - Class: 114
-      Script: {instanceID: 20174}
+      Script: {instanceID: 20118}
     - Class: 114
-      Script: {instanceID: 20348}
+      Script: {instanceID: 20176}
     - Class: 114
-      Script: {instanceID: 20370}
+      Script: {instanceID: 20350}
     - Class: 114
-      Script: {instanceID: 20842}
+      Script: {instanceID: 20372}
     - Class: 114
-      Script: {instanceID: 20848}
+      Script: {instanceID: 20844}
     - Class: 114
-      Script: {instanceID: 20928}
+      Script: {instanceID: 20850}
     - Class: 114
-      Script: {instanceID: 21030}
+      Script: {instanceID: 20930}
     - Class: 114
-      Script: {instanceID: 21116}
+      Script: {instanceID: 21032}
     - Class: 114
-      Script: {instanceID: 21500}
+      Script: {instanceID: 21118}
     - Class: 114
-      Script: {instanceID: 21552}
+      Script: {instanceID: 21502}
     - Class: 114
-      Script: {instanceID: 22422}
+      Script: {instanceID: 21554}
     - Class: 114
-      Script: {instanceID: 23358}
+      Script: {instanceID: 22424}
     - Class: 114
-      Script: {instanceID: 23418}
+      Script: {instanceID: 23360}
     - Class: 114
-      Script: {instanceID: 23566}
+      Script: {instanceID: 23420}
     - Class: 114
-      Script: {instanceID: 23758}
+      Script: {instanceID: 23568}
     - Class: 114
-      Script: {instanceID: 23952}
+      Script: {instanceID: 23760}
     - Class: 114
-      Script: {instanceID: 24640}
+      Script: {instanceID: 23954}
     - Class: 114
-      Script: {instanceID: 24706}
+      Script: {instanceID: 24342}
     - Class: 114
-      Script: {instanceID: 24964}
+      Script: {instanceID: 24620}
     - Class: 114
-      Script: {instanceID: 24968}
+      Script: {instanceID: 24644}
     - Class: 114
-      Script: {instanceID: 25030}
+      Script: {instanceID: 24664}
     - Class: 114
-      Script: {instanceID: 25072}
+      Script: {instanceID: 24712}
     - Class: 114
-      Script: {instanceID: 25334}
+      Script: {instanceID: 24970}
     - Class: 114
-      Script: {instanceID: 25416}
+      Script: {instanceID: 24974}
     - Class: 114
-      Script: {instanceID: 26022}
+      Script: {instanceID: 25036}
     - Class: 114
-      Script: {instanceID: 26050}
+      Script: {instanceID: 25078}
     - Class: 114
-      Script: {instanceID: 26106}
+      Script: {instanceID: 25340}
     - Class: 114
-      Script: {instanceID: 26312}
+      Script: {instanceID: 25422}
     - Class: 114
-      Script: {instanceID: 26498}
+      Script: {instanceID: 26028}
     - Class: 114
-      Script: {instanceID: 26558}
+      Script: {instanceID: 26056}
     - Class: 114
-      Script: {instanceID: 26852}
+      Script: {instanceID: 26112}
     - Class: 114
-      Script: {instanceID: 26880}
+      Script: {instanceID: 26318}
     - Class: 114
-      Script: {instanceID: 27002}
+      Script: {instanceID: 26564}
     - Class: 114
-      Script: {instanceID: 27076}
+      Script: {instanceID: 26858}
     - Class: 114
-      Script: {instanceID: 27086}
+      Script: {instanceID: 26886}
     - Class: 114
-      Script: {instanceID: 27102}
+      Script: {instanceID: 27010}
     - Class: 114
-      Script: {instanceID: 27168}
+      Script: {instanceID: 27084}
     - Class: 114
-      Script: {instanceID: 27288}
+      Script: {instanceID: 27094}
     - Class: 114
-      Script: {instanceID: 27438}
+      Script: {instanceID: 27110}
     - Class: 114
-      Script: {instanceID: 27708}
+      Script: {instanceID: 27176}
     - Class: 114
-      Script: {instanceID: 28542}
+      Script: {instanceID: 27296}
     - Class: 114
-      Script: {instanceID: 30500}
+      Script: {instanceID: 27446}
     - Class: 114
-      Script: {instanceID: 57774}
+      Script: {instanceID: 27716}
     - Class: 114
-      Script: {instanceID: 60040}
+      Script: {instanceID: 27866}
+    - Class: 114
+      Script: {instanceID: 28552}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 169
+      Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -585,6 +613,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime
     namespaceName: UnityEngine.VFX.Utility
     className: VFXUIDropdownBinder
+  - hash:
+      serializedVersion: 2
+      Hash: 7b42ea8f2c42699dba02f1bf2941eb63
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Selected
   - hash:
       serializedVersion: 2
       Hash: ad49e20f31ed572e586aa8bbaafb591b
@@ -1595,6 +1629,12 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: 3c8587c5d24d5ab68f0f6ba19941b8f0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ActivityLogic
+  - hash:
+      serializedVersion: 2
       Hash: d7c8092511063e0dae8106bfc8ed63dd
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1655,6 +1695,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerValueTuple
   - hash:
       serializedVersion: 2
+      Hash: 7c979c251458ff99bfe2be48d906c095
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GrowAndShrink
+  - hash:
+      serializedVersion: 2
       Hash: 5382156409d7c462c67822a5ee8d6c85
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1691,7 +1737,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 471a7e1331c76fca571bd1276518691e
+      Hash: 024900fbd78c7723bffa85299e29f12d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: AudioPlayer
@@ -2105,6 +2151,12 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
+      Hash: ecc718c624cd78b2463704d15978142d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Wheel
+  - hash:
+      serializedVersion: 2
       Hash: a6d4760c1aaaf3fc6e618d120234abd0
     assemblyName: Unity.VisualEffectGraph.Runtime
     namespaceName: UnityEngine.VFX
@@ -2195,23 +2247,11 @@ ScriptsOnlyBuild:
     className: VFXInputAxisBinder
   - hash:
       serializedVersion: 2
-      Hash: ecc718c624cd78b2463704d15978142d
+      Hash: b6de749b5efc7b325986ded0bc6c72fe
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: Wheel
-  - hash:
-      serializedVersion: 2
-      Hash: 4d0dee8936f60a5c9e85b0b662a24476
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ActivityLogic
-  - hash:
-      serializedVersion: 2
-      Hash: 7c979c251458ff99bfe2be48d906c095
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: GrowAndShrink
+    className: ConfettiController
   platform: 9
   scenePathNames:
-  - Assets/Scenes/Cobra.unity
-  playerPath: /Users/mateolarreaferro/Desktop/Presente/app
+  - Assets/Scenes/Cobra_Demo_2.unity
+  playerPath: /Users/mateolarreaferro/Desktop/Cobra/app test

@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Cobra_Demo_1.unity
-    guid: 367ed6112705348c9b799b2bfd3ebf0d
+    path: Assets/Scenes/Cobra_Demo_2.unity
+    guid: 09b7bd8bf94234f68ac211390205b030
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 2254ea96c25d44ac99d532e14669780f, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 92c6a67740370466d820662946fee75f, type: 2}
